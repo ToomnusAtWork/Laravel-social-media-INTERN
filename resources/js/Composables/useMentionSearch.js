@@ -1,5 +1,5 @@
-import { ref } from 'vue'
-import { MeiliSearch } from 'meilisearch'
+import { ref } from 'vue';
+import { MeiliSearch } from 'meilisearch';
 
 const client = new MeiliSearch({
     host: import.meta.env.VITE_MEILISEARCH_HOST,
