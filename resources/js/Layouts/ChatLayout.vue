@@ -1,10 +1,10 @@
 <template>
     <AuthenticatedLayout>
-        <div class="py-8 max-w-7xl mx-auto space-y-6 md:space-y-0 md:grid grid-cols-7 gap-6 sm:px-6 lg:px-8">
-            <div class="col-span-2 space-y-3 ">
-                <slot name="side" />
+        <div class="py-9 max-w-7xl mx-auto space-y-3 md:space-y-0 md:grid grid-cols-7 gap-6 sm:px-6 lg:px-8">
+            <div class="col-span-4 space-y-2 ">
+                <slot name="Message" />
             </div>
-            <div class="col-span-5">
+            <div class="col-span-3">
                 <slot />
             </div>
         </div>

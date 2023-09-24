@@ -1,29 +1,65 @@
 <template>
     <ChatLayout>
-        <Head title="Chat" />
+        <div class="sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900">
+                    USER active
+                </div>
+            </div>
+        </div>
+        <template #Message>
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900">Chatbox</div>
+                <div class="chatbox">
+                    <chat-message></chat-message>
+                    <form action="#" class="chat_form">
+                        <textarea 
+                            id="body" 
+                            cols="70" 
+                            rows="6"
+                            class="chat_input"
+                            @keydown="handleMessageInput"
+                            v-model="body">
+                        </textarea>
+                        <span class="chat_form-helptext">
+                            Hit to send
+                        </span>
+                    </form>
+                </div>
+            </div>
+        </template>
         <!-- <div class="chat">
-        <chat-message></chat-message>
-        <form action="#" class="chat_form">
-            <textarea 
-                id="body" 
-                cols="30" 
-                rows="40"
-                class="chat_input"
-                @keydown="handleMessageInput"
-                v-model="body">
-            </textarea>
-            <span class="chat_form-helptext">
-                Hit to send
-            </span>
-        </form>
-        </div> -->
+            <chat-message></chat-message>
+            <form action="#" class="chat_form">
+                <textarea 
+                    id="body" 
+                    cols="30" 
+                    rows="40"
+                    class="chat_input"
+                    @keydown="handleMessageInput"
+                    v-model="body">
+                </textarea>
+                <span class="chat_form-helptext">
+                    Hit to send
+                </span>
+            </form>
+        </div>
+        <template #User>
+            <div>
+                Helloworld
+            </div>
+        </template> -->
     </ChatLayout>
 </template>
 
-<script>
-    
+<script setup>
+    import ChatLayout from '@/Layouts/ChatLayout.vue';
     import moment from 'moment';
-    export default {
+
+</script>
+
+<script>
+        export default {
     data() {
         return {
             body: null
@@ -54,13 +90,19 @@
             }
             let tempMessage = this.buildTempMessage();
             // send ajax request
+             axios.post('/chat/messages', {
+                    body: this.body.trim()
+                }).catch(() => {
+                console.log('failed');
+                })
             console.log(tempMessage);
             this.body = null;
         }
     }
 }
-</script>
 
+</script>
+<!-- 
 <style lang="css">
 .chat {
         background-color: #fff;
@@ -82,4 +124,4 @@ textarea .chat_input {
 span .chat_form-helptext {
     color: #aaa;
 }
-</style>
+</style> -->
