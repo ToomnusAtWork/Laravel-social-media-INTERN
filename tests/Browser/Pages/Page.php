@@ -14,7 +14,10 @@ abstract class Page extends BasePage
     public static function siteElements(): array
     {
         return [
-            '@element' => '#selector',
+            '@chatMessages' => '.chat__messages',
+            '@firstChatMessages' => '.chat__messages .chat__message:first-child',
+            '@ownMessage' => '.chat__messages--own',
+            '@onlineList' => '.users',
         ];
     }
 }

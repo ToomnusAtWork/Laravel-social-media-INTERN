@@ -1,4 +1,5 @@
 <template>
+    <Head title="Chat" />
     <ChatLayout>
         <div class="sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -55,6 +56,7 @@
 <script setup>
     import ChatLayout from '@/Layouts/ChatLayout.vue';
     import moment from 'moment';
+    import { Head } from '@inertiajs/vue3';
 
 </script>
 

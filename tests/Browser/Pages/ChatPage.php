@@ -4,7 +4,7 @@ namespace Tests\Browser\Pages;
 
 use Laravel\Dusk\Browser;
 
-class HomePage extends Page
+class ChatPage extends Page
 {
     /**
      * Get the URL for the page.
@@ -19,7 +19,18 @@ class HomePage extends Page
      */
     public function assert(Browser $browser): void
     {
-        $this->assertPathIs($this->url());
+        $browser->assertPathIs($this->url());
+    }
+
+    public function typeMessage(Browser $browser, $body = nulls)
+    {
+        $browser->type('@body', $body)
+            ->pause(500);
+    }
+
+    public function sendMessage(Browser $browser)
+    {
+        $browser->keys('@body', ['{enter}']);
     }
 
     /**
@@ -30,7 +41,7 @@ class HomePage extends Page
     public function elements(): array
     {
         return [
-            '@element' => '#selector',
+            '@body' => 'textarea[id="body"]',
         ];
     }
 }
