@@ -11,8 +11,8 @@ class ChatMessageController extends Controller
 {
     public function index()
     {
-        $messages = Message::get();
-        return;
+        $messages = Message::with(['user'])->latest()->limit(100)->get();
+        return Inertia::render('Chat/chatIndex');
     }
 
     public function store(StoreMessageRequest $request)
@@ -23,4 +23,5 @@ class ChatMessageController extends Controller
 
         return $messages;
     }
+
 }

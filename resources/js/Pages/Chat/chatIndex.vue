@@ -1,0 +1,150 @@
+
+<script setup>
+    import ChatLayout from '@/Layouts/ChatLayout.vue';
+    import ChatMessageBox from '@/Components/Chat/ChatMessagebox.vue';
+    import UserBox from '@/Components/Chat/Userbox.vue';
+    import moment from 'moment';
+    import { Head, useForm } from '@inertiajs/vue3';
+    import { onMounted } from 'vue';
+    import {EventBus} from "../../bus";
+</script>
+
+
+<template>
+    <Head title="Chat" />
+    <ChatLayout>
+        <div class="sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <UserBox />
+            </div>
+        </div>
+        <template #Message>
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900">Chatbox</div>
+                <div class="chatbox">
+                    <ChatMessageBox />
+                    <form action="#" class="chat__form">
+                        <textarea
+                            name="chat" 
+                            id="body" 
+                            cols="50" 
+                            rows="6"
+                            class="chat__form-input border-gray-300
+                             focus:border-indigo-500
+                              focus:ring-indigo-500
+                              rounded-md shadow-sm"
+                            @keydown="handleMessageInput"
+                            v-on:focus="form.clearErrors('body')"
+                            v-model="form.body">
+                        </textarea>
+                        <div v-if="form.errors.body" class="text-sm text-red-700">
+                            {{ form.errors.body }}
+                        </div>
+                        <button type="submit" 
+                        class="mt-2 bg-blue-700 
+                        ml-3 px-4 py-2 rounded-md 
+                        font-medium text-white"
+                        :disabled="form.processing"
+                        :class="{ 'opacity-50':form.processing }">Send</button>
+                        <span class="chat__form-helptext">
+                            Hit Return to send or Shift + Return for new line
+                        </span>
+                    </form>
+                </div>
+            </div>
+        </template>
+    </ChatLayout>
+</template>
+
+
+<script>
+    const form = useForm({
+        body: '',
+    })
+    
+    // form.setError('body', 'กรุณาพิม์ข้อความลงบนกล่องข้อความด้วย!')
+    
+    const createMessage = () => {
+        form.post('/chat')
+    }
+
+        export default {
+    data() {
+        return {
+            form,
+            body: null
+        };
+    },
+    methods: {
+        handleMessageInput(e) {
+            if (e.keyCode === 13 && !e.shiftKey) {
+                e.preventDefault();
+                this.send();
+            }
+        },
+        buildTempMessage() {
+            let tempId = Date.now();
+            return {
+                id: tempId,
+                body: this.body,
+                created_at: moment().utc(0).format('YYYY-MM-DD HH:mm:ss'),
+                selfOwned: true,
+                user: {
+                    name: 'Peanut'
+                }
+            };
+        },
+        send() {
+            if (!this.body || this.body.trim() === '') {
+                return;
+            }
+            let tempMessage = this.buildTempMessage();
+
+            EventBus.$emit('message.added', tempMessage);
+            // send ajax request
+            axios.post('/chat/messages', {
+                    body: this.body.trim()
+                }).catch(() => {
+                console.log('failed');
+                })
+            console.log(tempMessage);
+            this.body = null;
+        }
+
+        // const sendMessage = () => {
+        //     if (!this.form.body || this.form.body.trim() === '') {
+        //         return;
+        //     }
+        //     form.post(route('Chat.store'), {
+                
+        //     })
+        // }
+    }
+}
+
+</script>
+
+<style lang="scss">
+    .chat {
+        background-color: #fff;
+        border: 1px solid #d3e0e9;
+        border-radius: 3px;
+        margin-bottom: 20px;
+
+        &__form {
+            border-top: 1px solid #d3e0e9;
+            padding: 10px;
+
+            &-input {
+                width: 100%;
+                border: 1px solid #d3e0e9;
+                padding: 5px 10px;
+                outline: none;
+            }
+
+            &-helptext {
+                color: #aaa;
+            }
+        }
+    }
+</style>

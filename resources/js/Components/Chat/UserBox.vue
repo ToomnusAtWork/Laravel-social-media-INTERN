@@ -15,21 +15,20 @@ export default {
 <style lang="scss">
     .users {
         background-color: #fff;
-        border: 1px solid #d3e0e9;
         border-radius: 3px;
-    }
 
-    .header {
-        padding: 15px;
-        font-weight: 800;
-        margin: 0;
-    }
-
-    .header {
-        padding: 0 15px;
-
-        &:last-child {
-            padding-bottom: 15px;
+        &__header {
+            padding: 15px;
+            font-weight: 800;
+            margin: 0;
         }
-    }    
+
+        &__user {
+            padding: 0 15px;
+
+            &:last-child {
+                padding-bottom: 15px;
+            }
+        }
+    }
 </style>

@@ -10,9 +10,14 @@ use Inertia\Response;
 
 class ChatController extends Controller
 {
-    public function __invoke(Request $request)
+    public function __construct()
     {
-        $messages = Message::with(['user'])->latest()->limit(100)->get();
-        return Inertia::render('Chat/chat');
+        $this->middleware('auth');
     }
+
+    public function __invoke()
+    {
+        return Inertia::render('Chat/chatIndex');
+    }
+
 }

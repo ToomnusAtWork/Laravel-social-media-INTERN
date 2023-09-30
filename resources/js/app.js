@@ -2,11 +2,14 @@ import './bootstrap';
 import '../css/app.css';
 import '@github/markdown-toolbar-element'
 import 'floating-vue/dist/style.css'
+import "vue-toastification/dist/index.css";
 
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
+import Toast from "vue-toastification";
+
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
@@ -16,6 +19,7 @@ createInertiaApp({
     setup({ el, App, props, plugin }) {
         return createApp({ render: () => h(App, props) })
             .use(plugin)
+            .use(Toast)
             .use(ZiggyVue, Ziggy)
             .mount(el);
     },
