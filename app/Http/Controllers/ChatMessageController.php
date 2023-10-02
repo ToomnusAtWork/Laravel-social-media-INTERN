@@ -20,7 +20,6 @@ class ChatMessageController extends Controller
         $messages = $request->user()->messages()->create([
             'body' => $request->get('body')
         ]);
-
         return $messages;
     }
 

@@ -42,9 +42,11 @@ import Svg from '../Svg.vue';
 import { Mentionable } from 'vue-mention'
 import useMentionSearch from '@/Composables/useMentionSearch'
 import { watch } from 'vue'
+import { useToast } from 'vue-toastification';
 
 const { visible, hideCreatePostForm, form, discussion, user } = useCreatePost()
 const { mentionSearch, mentionSearchResults } = useMentionSearch()
+const toast = useToast()
 
 watch(user, (user) => {
     if (!user) {
@@ -57,6 +59,7 @@ watch(user, (user) => {
 const createPost = () => {
     form.post(route('posts.store', discussion.value), {
         onSuccess: () => {
+            toast('Post added!')
             form.reset()
             hideCreatePostForm()
         }

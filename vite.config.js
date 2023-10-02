@@ -7,7 +7,8 @@ export default defineConfig({
     ssr: {
         noExternal: [
             'vue-mention',
-            'floating-vue'
+            'floating-vue',
+            'vue-toastification'
         ]
     },
     plugins: [

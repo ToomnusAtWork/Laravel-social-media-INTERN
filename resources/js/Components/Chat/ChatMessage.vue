@@ -1,16 +1,14 @@
 <template>
-    <div class="chat__message chat__message--own">
-        <strong class="chat__message-user">Peter</strong>
-        <span class="chat__message-timestamp">123131</span>
-        <p class="chat__message-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Incidunt distinctio illum exercitationem nihil voluptas laboriosam hic, ut, delectus, 
-            perspiciatis quod quam eligendi corrupti doloremque officia explicabo enim ea? Aliquid, 
-            odio.</p>
+    <div class="chat__message chat__message--own"> 
+        <strong class="chat__message-user">Peanut</strong>
+        <span class="chat__message-timestamp">: 18/09/2023 (10:23)</span>
+        <p class="chat__message-body">สวัสดีจ้า</p>
     </div>
 </template>
+
 <script>
 export default {
-    
+    props: ['message']   
 }
 </script>
 

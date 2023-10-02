@@ -10,6 +10,7 @@ use App\Http\Controllers\PostDestroyController;
 use App\Http\Controllers\PostPatchController;
 use App\Http\Controllers\PostStoreController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\ChatMessageController;
 use Illuminate\Foundation\Application;
@@ -40,8 +41,9 @@ Route::get('/', ForumIndexController::class)->name('home');
 Route::get('/discussions/{discussion:slug}', DiscussionShowController::class)->name('discussions.show');
 
 Route::get('/chat', ChatController::class)->name('chat');
-Route::get('/chat/messages', 'ChatMessageController@index');
-Route::post('/chat/messages', 'ChatMessageController@store');
+// Route::resource('/chat/messages', ChatMessageController::class);
+
+Route::get('/admin', [AdminController::class,'index'])->name('admin');
 
 Route::post('/markdown', MarkdownController::class)->name('markdown');
 

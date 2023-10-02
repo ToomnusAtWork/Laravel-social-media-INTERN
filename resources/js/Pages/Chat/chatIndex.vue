@@ -4,9 +4,7 @@
     import ChatMessageBox from '@/Components/Chat/ChatMessagebox.vue';
     import UserBox from '@/Components/Chat/Userbox.vue';
     import moment from 'moment';
-    import { Head, useForm } from '@inertiajs/vue3';
-    import { onMounted } from 'vue';
-    import {EventBus} from "../../bus";
+    import { Head } from '@inertiajs/vue3';
 </script>
 
 
@@ -24,6 +22,8 @@
                 <div class="chatbox">
                     <ChatMessageBox />
                     <form action="#" class="chat__form">
+                        <!-- v-on:focus="form.clearErrors('body')"
+                            v-model="form.body" -->
                         <textarea
                             name="chat" 
                             id="body" 
@@ -34,18 +34,9 @@
                               focus:ring-indigo-500
                               rounded-md shadow-sm"
                             @keydown="handleMessageInput"
-                            v-on:focus="form.clearErrors('body')"
-                            v-model="form.body">
+                            v-model="body"
+                            >
                         </textarea>
-                        <div v-if="form.errors.body" class="text-sm text-red-700">
-                            {{ form.errors.body }}
-                        </div>
-                        <button type="submit" 
-                        class="mt-2 bg-blue-700 
-                        ml-3 px-4 py-2 rounded-md 
-                        font-medium text-white"
-                        :disabled="form.processing"
-                        :class="{ 'opacity-50':form.processing }">Send</button>
                         <span class="chat__form-helptext">
                             Hit Return to send or Shift + Return for new line
                         </span>
@@ -58,20 +49,9 @@
 
 
 <script>
-    const form = useForm({
-        body: '',
-    })
-    
-    // form.setError('body', 'กรุณาพิม์ข้อความลงบนกล่องข้อความด้วย!')
-    
-    const createMessage = () => {
-        form.post('/chat')
-    }
-
         export default {
     data() {
         return {
-            form,
             body: null
         };
     },
@@ -90,7 +70,7 @@
                 created_at: moment().utc(0).format('YYYY-MM-DD HH:mm:ss'),
                 selfOwned: true,
                 user: {
-                    name: 'Peanut'
+                    name: this.users
                 }
             };
         },
@@ -100,25 +80,14 @@
             }
             let tempMessage = this.buildTempMessage();
 
-            EventBus.$emit('message.added', tempMessage);
-            // send ajax request
-            axios.post('/chat/messages', {
-                    body: this.body.trim()
-                }).catch(() => {
-                console.log('failed');
-                })
-            console.log(tempMessage);
-            this.body = null;
+            // axios.post('/chat/messages', {
+            //         body: this.body.trim()
+            // }).catch(() => {
+            //     console.log('failed');
+            // })
+            // this.body = null;
         }
 
-        // const sendMessage = () => {
-        //     if (!this.form.body || this.form.body.trim() === '') {
-        //         return;
-        //     }
-        //     form.post(route('Chat.store'), {
-                
-        //     })
-        // }
     }
 }
 
