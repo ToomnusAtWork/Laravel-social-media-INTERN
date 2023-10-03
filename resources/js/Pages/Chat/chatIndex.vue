@@ -11,7 +11,9 @@
                 <div class="p-6 text-gray-900">Chatbox</div>
                 <div class="chatbox">
                     <template v-if="messages.length">
-                        <ChatMessage v-for="message in messages" :key="messages.id" :message="message"/>
+                        <div class="h-96 max-h-96 overflow-y-scroll">
+                            <ChatMessage v-for="message in messages" :key="messages.id" :message="message"/>
+                        </div>
                     </template>
                     <form action="#" class="chat__form">
                         <!-- v-on:focus="form.clearErrors('body')"
@@ -25,9 +27,7 @@
                              focus:border-indigo-500
                               focus:ring-indigo-500
                               rounded-md shadow-sm"
-                            @keydown="handleMessageInput"
-                            >
-                        </textarea>
+                            @keydown="handleMessageInput"></textarea>
                         <span class="chat__form-helptext">
                             Hit Return to send or Shift + Return for new line
                         </span>

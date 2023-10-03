@@ -4,16 +4,10 @@
     </div>
 </template>
 
-<script setup>
-    import ChatMessage from '@/Components/Chat/ChatMessage.vue';
-</script>
-
 <script>
     export default {
         data () {
-            return {
-                messages: []
-            }
+
         },
         // mount () {
         //     // axios.get('/Chat/ChatMessageBox').then((response) => {
@@ -33,13 +27,3 @@
         // }
     }
 </script>
-
-<style lang="scss">
-    .chat {
-        &__messages {
-            height: 400px;
-            max-height: 400px;
-            overflow-y: scroll;
-        }
-    }
-</style>

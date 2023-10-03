@@ -17,7 +17,7 @@
     .chat {
         &__message {
             padding: 15px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #edeaea;
 
             &--own {
                 background-color: #f0f0f0;
@@ -29,7 +29,7 @@
 
             &-timestamp {
                 color: #aaa;
-
+                margin: 10px;
             }
 
             &-body {
