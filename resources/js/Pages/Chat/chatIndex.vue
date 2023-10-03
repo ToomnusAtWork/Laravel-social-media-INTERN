@@ -1,13 +1,3 @@
-
-<script setup>
-    import ChatLayout from '@/Layouts/ChatLayout.vue';
-    import ChatMessageBox from '@/Components/Chat/ChatMessagebox.vue';
-    import UserBox from '@/Components/Chat/Userbox.vue';
-    import moment from 'moment';
-    import { Head } from '@inertiajs/vue3';
-</script>
-
-
 <template>
     <Head title="Chat" />
     <ChatLayout>
@@ -20,7 +10,9 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">Chatbox</div>
                 <div class="chatbox">
-                    <ChatMessageBox />
+                    <template v-if="messages.length">
+                        <ChatMessage v-for="message in messages" :key="messages.id" :message="message"/>
+                    </template>
                     <form action="#" class="chat__form">
                         <!-- v-on:focus="form.clearErrors('body')"
                             v-model="form.body" -->
@@ -34,7 +26,6 @@
                               focus:ring-indigo-500
                               rounded-md shadow-sm"
                             @keydown="handleMessageInput"
-                            v-model="body"
                             >
                         </textarea>
                         <span class="chat__form-helptext">
@@ -47,7 +38,19 @@
     </ChatLayout>
 </template>
 
+<script setup>
+    import ChatLayout from '@/Layouts/ChatLayout.vue';
+    import ChatMessage from '@/Components/Chat/ChatMessage.vue';
+    import UserBox from '@/Components/Chat/UserBox.vue';
+    import moment from 'moment';
+    import { Head } from '@inertiajs/vue3';
 
+    defineProps ({
+        messages: Array
+})
+</script>
+
+<!-- 
 <script>
         export default {
     data() {
@@ -90,8 +93,7 @@
 
     }
 }
-
-</script>
+</script> -->
 
 <style lang="scss">
     .chat {

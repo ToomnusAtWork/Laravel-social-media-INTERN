@@ -40,8 +40,8 @@ Route::get('/', function () {
 Route::get('/', ForumIndexController::class)->name('home');
 Route::get('/discussions/{discussion:slug}', DiscussionShowController::class)->name('discussions.show');
 
-Route::get('/chat', ChatController::class)->name('chat');
-// Route::resource('/chat/messages', ChatMessageController::class);
+// Route::get('/chat', ChatMessageController::class)->name('chat');
+Route::get('/chat', [ChatMessageController::class, 'index'])->name('chat');
 
 Route::get('/admin', [AdminController::class,'index'])->name('admin');
 

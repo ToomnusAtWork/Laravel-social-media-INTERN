@@ -47,7 +47,6 @@ class ForumIndexController extends Controller
             AllowedFilter::custom('topic', new TopicQueryFilter()),
             AllowedFilter::custom('solved', new SolvedQueryFilter()),
             AllowedFilter::custom('unsolved', new UnsolvedQueryFilter()),
-
             AllowedFilter::custom('mine', new MineQueryFilter()),
             AllowedFilter::custom('participating', new ParticipatingQueryFilter()),
             AllowedFilter::custom('mentioned', new MentionedQueryFilter()),

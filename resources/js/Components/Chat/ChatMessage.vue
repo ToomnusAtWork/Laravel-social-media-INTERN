@@ -1,16 +1,17 @@
 <template>
     <div class="chat__message chat__message--own"> 
-        <strong class="chat__message-user">Peanut</strong>
-        <span class="chat__message-timestamp">: 18/09/2023 (10:23)</span>
-        <p class="chat__message-body">สวัสดีจ้า</p>
+        <strong class="chat__message-user">{{ message.user_id.username }}</strong>
+        <span class="chat__message-timestamp">{{ message.created_at.datetime }}</span>
+        <p class="chat__message-body">{{ message.body }}</p>
     </div>
 </template>
 
-<script>
-export default {
-    props: ['message']   
-}
+<script setup>
+    defineProps ({
+        message: Object
+})
 </script>
+
 
 <style lang="scss">
     .chat {

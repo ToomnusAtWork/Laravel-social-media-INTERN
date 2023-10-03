@@ -15,7 +15,7 @@ class ChatController extends Controller
         $this->middleware('auth');
     }
 
-    public function __invoke()
+    public function __invoke() 
     {
         return Inertia::render('Chat/chatIndex');
     }

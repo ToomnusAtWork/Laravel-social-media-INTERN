@@ -38,6 +38,7 @@
                 <InputLabel for="body" value="Body" class="sr-only" />
                 <Mentionable :keys="['@']" offset="6" v-on:search="mentionSearch" :items="mentionSearchResults" v-if="!markdownPreviewEnabled">
                     <Textarea id="body" class="w-full h-48 align-top" v-model="form.body" />
+
                     <template #no-result>
                         <div class="mention-item">No username found</div>
                     </template>
@@ -64,18 +65,18 @@ import Textarea from '../Textarea.vue';
 import Select from '../Select.vue';
 import useCreateDiscussion from '@/Composables/useCreateDiscussion';
 import Svg from '../Svg.vue';
-import { Mentionable } from 'vue-mention';
-import useMentionSearch from '@/Composables/useMentionSearch';
+import { Mentionable } from 'vue-mention'
+import useMentionSearch from '@/Composables/useMentionSearch'
 import { useToast } from 'vue-toastification';
 
 const { visible, hideCreateDiscussionForm, form } = useCreateDiscussion()
 const { mentionSearch, mentionSearchResults } = useMentionSearch()
-const toast = useToast()
+const Toast = useToast()
 
 const createDiscussion = () => {
     form.post(route('discussions.store'), {
         onSuccess: () => {
-            toast('Discussion added!')
+            Toast('Discussion Added!')
             form.reset()
             hideCreateDiscussionForm()
         }

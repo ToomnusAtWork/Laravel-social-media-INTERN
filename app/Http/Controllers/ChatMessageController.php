@@ -4,15 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\Message;
 use App\Htpp\Requests\StoreMessageRequest;
+use App\Http\Resources\MessageResource;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 
 class ChatMessageController extends Controller
 {
     public function index()
     {
-        $messages = Message::with(['user'])->latest()->limit(100)->get();
-        return Inertia::render('Chat/chatIndex');
+        return Inertia::render('Chat/chatIndex', [
+            'messages' => MessageResource::collection(
+                Message::with(['user'])
+                ->latest()
+                ->get()
+            )
+        ]);
     }
 
     public function store(StoreMessageRequest $request)
