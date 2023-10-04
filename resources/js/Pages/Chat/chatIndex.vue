@@ -27,9 +27,10 @@
                              focus:border-indigo-500
                               focus:ring-indigo-500
                               rounded-md shadow-sm"
-                            @keydown="handleMessageInput"></textarea>
+                            @keydown="handleMessageInput"
+                            v-model="textChat"></textarea>
                         <span class="chat__form-helptext">
-                            Hit Return to send or Shift + Return for new line
+                             Hit Return to send or Shift + Return for new line
                         </span>
                     </form>
                 </div>
@@ -43,11 +44,26 @@
     import ChatMessage from '@/Components/Chat/ChatMessage.vue';
     import UserBox from '@/Components/Chat/UserBox.vue';
     import moment from 'moment';
-    import { Head } from '@inertiajs/vue3';
+    import { Head, router } from '@inertiajs/vue3';
+    import { ref, watch} from 'vue';
+    import debounce from "lodash/debounce";
 
     defineProps ({
         messages: Array
 })
+
+let textChat = ref('');
+watch(textChat, debounce(function (value){
+    console.log(value);
+    router.get('/chat', { textChat: value }, { 
+        preserveState: true,
+        replace: true 
+    })
+    }, 500));
+
+// router.on('handleMessageInput', (event) => {
+//     console.log('Keypress');
+// })
 </script>
 
 <!-- 

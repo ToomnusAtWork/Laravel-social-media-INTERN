@@ -13,7 +13,6 @@
         <div>
         <div class="flex overflow-hidden bg-white pt-16">
             <AdminMenu>
-                
             </AdminMenu>
             <div id="main-content" class="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
                 <main>
@@ -141,8 +140,8 @@
                         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                             <div class="flex items-center">
                                 <div class="flex-shrink-0">
-                                <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">2,340</span>
-                                <h3 class="text-base font-normal text-gray-500">New products this week</h3>
+                                <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">30</span>
+                                <h3 class="text-base font-normal text-gray-500">New users this week</h3>
                                 </div>
                                 <div class="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
                                 14.6%
@@ -155,7 +154,7 @@
                         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                             <div class="flex items-center">
                                 <div class="flex-shrink-0">
-                                <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">5,355</span>
+                                <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">12</span>
                                 <h3 class="text-base font-normal text-gray-500">Visitors this week</h3>
                                 </div>
                                 <div class="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
@@ -169,7 +168,7 @@
                         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                             <div class="flex items-center">
                                 <div class="flex-shrink-0">
-                                <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">385</span>
+                                <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">3</span>
                                 <h3 class="text-base font-normal text-gray-500">User signups this week</h3>
                                 </div>
                                 <div class="ml-5 w-0 flex items-center justify-end flex-1 text-red-500 text-base font-bold">
@@ -184,7 +183,7 @@
                     <div class="grid grid-cols-1 2xl:grid-cols-2 xl:gap-4 my-4">
                         <div class="bg-white shadow rounded-lg mb-4 p-4 sm:p-6 h-full">
                             <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-xl font-bold leading-none text-gray-900">Latest Customers</h3>
+                                <h3 class="text-xl font-bold leading-none text-gray-900">Latest Activities</h3>
                                 <a href="#" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg inline-flex items-center p-2">
                                 View all
                                 </a>
@@ -205,7 +204,7 @@
                                             </p>
                                         </div>
                                         <div class="inline-flex items-center text-base font-semibold text-gray-900">
-                                            $320
+                                            1 min ago
                                         </div>
                                     </div>
                                 </li>
@@ -223,7 +222,7 @@
                                             </p>
                                         </div>
                                         <div class="inline-flex items-center text-base font-semibold text-gray-900">
-                                            $3467
+                                            2 mins ago
                                         </div>
                                     </div>
                                 </li>
@@ -241,7 +240,7 @@
                                             </p>
                                         </div>
                                         <div class="inline-flex items-center text-base font-semibold text-gray-900">
-                                            $67
+                                            6 mins ago.
                                         </div>
                                     </div>
                                 </li>
@@ -259,7 +258,7 @@
                                             </p>
                                         </div>
                                         <div class="inline-flex items-center text-base font-semibold text-gray-900">
-                                            $2367
+                                            10 mins ago.
                                         </div>
                                     </div>
                                 </li>
@@ -277,7 +276,7 @@
                                             </p>
                                         </div>
                                         <div class="inline-flex items-center text-base font-semibold text-gray-900">
-                                            $367
+                                            15 mins ago.
                                         </div>
                                     </div>
                                 </li>
