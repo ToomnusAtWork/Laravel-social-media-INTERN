@@ -15,7 +15,7 @@
                             <ChatMessage v-for="message in messages" :key="messages.id" :message="message"/>
                         </div>
                     </template>
-                    <form class="chat__form">
+                    <form action="#" class="chat__form">
                         <!-- v-on:focus="form.clearErrors('body')"
                             v-model="form.body" -->
                         <textarea
@@ -27,9 +27,8 @@
                              focus:border-indigo-500
                               focus:ring-indigo-500
                               rounded-md shadow-sm"
-                            v-model="textChat"
-                            @keydown.enter.exact.prevent="handleSubmit()"
-                            ></textarea>
+                            @keydown="handleMessageInput"
+                            v-model="textChat"></textarea>
                         <span class="chat__form-helptext">
                              Hit Return to send or Shift + Return for new line
                         </span>
@@ -48,11 +47,11 @@
     import { Head, router } from '@inertiajs/vue3';
     import { ref, watch} from 'vue';
     import debounce from "lodash/debounce";
-import axios from 'axios';
 
     defineProps ({
         messages: Array
 })
+
 let textChat = ref('');
 watch(textChat, debounce(function (value){
     console.log(value);
@@ -60,40 +59,11 @@ watch(textChat, debounce(function (value){
         preserveState: true,
         replace: true 
     })
-}, 500));
+    }, 500));
 
-function handleSubmit() {
-    console.log('sending message');
-    this.sendMessage();
-}
-
-function sendMessage() {
-    if(!this.textChat || this.textChat.trim() === ''){
-        return;
-    }
-    let tempMessage = this.createCurrentMessage();
-
-    axios.post('/chat', {
-        body: this.textChat.trim()
-    }).catch(() => {
-        console.log('error!')
-    })
-    this.textChat = null;
-}
-
-function createCurrentMessage () {
-    let tempId = Date.now();
-    return {
-        id: tempId,
-        body: this.textChat,
-        created_at: moment().utc(0).format('YYYY-MM-DD HH:mm:ss'),
-        selfOwned: true,
-        user: {
-            name: this.users
-        }
-    }
-}
-
+// router.on('handleMessageInput', (event) => {
+//     console.log('Keypress');
+// })
 </script>
 
 <!-- 

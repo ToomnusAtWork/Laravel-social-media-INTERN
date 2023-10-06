@@ -11,8 +11,8 @@ use App\Http\Controllers\PostPatchController;
 use App\Http\Controllers\PostStoreController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\ChatMessageController;
-use App\Http\Controllers\DashboardController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -42,10 +42,8 @@ Route::get('/discussions/{discussion:slug}', DiscussionShowController::class)->n
 
 // Route::get('/chat', ChatMessageController::class)->name('chat');
 Route::get('/chat', [ChatMessageController::class, 'index'])->name('chat');
-Route::post('/chat', [ChatMessageController::class, 'store']);
 
 Route::get('/admin', [AdminController::class,'index'])->name('admin');
-Route::get('/admin/dashboard', [DashboardController::class,'index'])->name('admin.dashboard');
 
 Route::post('/markdown', MarkdownController::class)->name('markdown');
 

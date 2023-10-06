@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Message;
-use App\Http\Requests\StoreMessageRequest;
+use App\Htpp\Requests\StoreMessageRequest;
 use App\Http\Resources\MessageResource;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
