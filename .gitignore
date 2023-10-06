@@ -20,3 +20,4 @@ yarn-error.log
 /.vagrant
 /.vscode
 data.ms
+.DS_Store
