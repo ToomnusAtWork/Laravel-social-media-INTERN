@@ -1,5 +1,5 @@
 <template>
-    <div class="chat__message chat__message--own"> 
+    <div class="chat__message" > 
         <strong class="chat__message-user">{{ message.user_id.username }}</strong>
         <span class="chat__message-timestamp">{{ message.created_at.datetime }}</span>
         <p class="chat__message-body">{{ message.body }}</p>

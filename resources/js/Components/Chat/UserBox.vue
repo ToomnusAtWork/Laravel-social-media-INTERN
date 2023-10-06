@@ -1,27 +1,34 @@
 <template>
     <div class="users">
         <div class="users__header">
-            1 User online</div>
-        <div class="users__user" v-for="user in users">
-            <a href="#">{{ user.name }}</a>
+            2 User online</div>
+        <div class="users__user" >
+            <ul>
+                <li>
+                    <a href="#" class="text-blue-700 ">นายชาไทย หวานปกติ</a>
+                </li>
+                <li>
+                    <a href="#" class="font-extrabold">Aonzaza</a>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
 
 
 <script>
-import pluralize from 'pluralize';
-export default {
+// import pluralize from 'pluralize';
+// export default {
         
-        data () {
-            return {
-                users: []
-            }
-        },
-        methods: {
-            pluralize: pluralize
-        },
-    }
+//         data () {
+//             return {
+//                 users: []
+//             }
+//         },
+//         methods: {
+//             pluralize: pluralize
+//         },
+//     }
 </script>
 
 <style lang="scss">
