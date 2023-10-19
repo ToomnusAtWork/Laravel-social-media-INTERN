@@ -1,23 +1,18 @@
 <template>
     <div class="users">
-        <div class="users__header">
-            2 User online</div>
-        <div class="users__user" >
-            <ul>
-                <li>
-                    <a href="#" class="text-blue-700 ">นายชาไทย หวานปกติ</a>
-                </li>
-                <li>
-                    <a href="#" class="font-extrabold">Aonzaza</a>
-                </li>
-            </ul>
+        <div class="users__header">{{ message }} {{ pluralize('user', message.length) }} online</div>
+        <div class="users__user" v-for="user in users">
+        <a href="#">{{ user.name }}</a>
         </div>
     </div>
 </template>
 
 
-<script>
-// import pluralize from 'pluralize';
+<script setup>
+    import pluralize from 'pluralize';
+    defineProps ({
+        message: Object
+})
 // export default {
         
 //         data () {

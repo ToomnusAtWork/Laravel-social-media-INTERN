@@ -13,6 +13,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ChatMessageController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -38,9 +39,9 @@ Route::get('/', function () {
 });
 
 Route::get('/', ForumIndexController::class)->name('home');
+Route::get('/homie', IndexController::class);
 Route::get('/discussions/{discussion:slug}', DiscussionShowController::class)->name('discussions.show');
 
-// Route::get('/chat', ChatMessageController::class)->name('chat');
 Route::get('/chat', [ChatMessageController::class, 'index'])->name('chat');
 Route::post('/chat', [ChatMessageController::class, 'store']);
 

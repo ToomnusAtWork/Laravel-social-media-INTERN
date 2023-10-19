@@ -3,13 +3,13 @@
     <ChatLayout>
         <div class="sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <UserBox />
+                <UserBox v-for="message in messages" :key="messages.id" :message="message"/>
             </div>
         </div>
         <template #Message>
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">Chatbox</div>
-                <div class="chatbox">
+                <div class="chatbox" >
                     <template v-if="messages.length">
                         <div class="h-96 max-h-96 overflow-y-scroll">
                             <ChatMessage v-for="message in messages" :key="messages.id" :message="message"/>
@@ -48,7 +48,7 @@
     import { Head, router } from '@inertiajs/vue3';
     import { ref, watch} from 'vue';
     import debounce from "lodash/debounce";
-import axios from 'axios';
+    import axios from 'axios';
 
     defineProps ({
         messages: Array
@@ -72,7 +72,7 @@ function sendMessage() {
         return;
     }
     let tempMessage = this.createCurrentMessage();
-
+    
     axios.post('/chat', {
         body: this.textChat.trim()
     }).catch(() => {
