@@ -9,8 +9,8 @@ import { Head, Link } from '@inertiajs/vue3';
     <Head title="Home" />
 
     <div>
-        <div class="min-h-screen bg-white">
-            <nav class="bg-white border-b">
+        <div class="bg-white max-h-screen">
+            <nav class="relative border-b border-grey-100">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex flex-wrap h-16 justify-between">
                         <Link :href="route('home')">
@@ -21,6 +21,7 @@ import { Head, Link } from '@inertiajs/vue3';
                                 </div>
                             </div>
                         </Link>
+
                         <div class="hidden space-x-11 sm:-my-px sm:ml-10 sm:flex ">
                             <NavLink :href="route('home')" :active="route().current('home')">
                                 Forum
@@ -32,7 +33,7 @@ import { Head, Link } from '@inertiajs/vue3';
                                 Login
                             </NavLink>
                             <NavLink>
-                                Sign up
+                                <button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">Register</button>
                             </NavLink>
                         </div>
 
@@ -68,11 +69,12 @@ import { Head, Link } from '@inertiajs/vue3';
                     </div>
                 </div>
             </nav>
-            <div class="container mx-auto px-6 md:px-12 relative z-10 flex items-center py-24 xl:py-30">
-                <div class="lg:w-3/5 xl:w-2/5 flex flex-col items-start relative">
-                    <!-- <span class="uppercase text-black-100 text-xl">Socialsociety</span> -->
-                    <h1 class="font-roboto-slab text-4xl sm:text-6xl text-red-400 leading-tight mt-4">
-                        Start engaging with your <br> team now!
+            <div class="bg-cover absolute w-full sm:w-full md:w-3/5 xl:w-3/5 h-full right-0"
+                style="background-image: url('../../image/BG.png');"></div>
+            <div class="flex min-h-screen container mx-auto lg:px-2 md:px-20 items-center ">
+                <div class="lg:w-2/5 xl:w-2/5 md:w-1/3  flex flex-col items-start relative">
+                    <h1 class="font-roboto-slab font-bold lg:text-5xl text-2xl sm:text-3xl text-red-400 leading-tight mt-4">
+                        Start engaging with your team now!
                     </h1>
                     <div class="max-w-md">
                         <p class="font-source-sans-pro text-indigo-500 mt-6 text-lg">
@@ -82,20 +84,20 @@ import { Head, Link } from '@inertiajs/vue3';
                     </div>
                     <a href="#" class="block bg-indigo-500 hover:bg-purple-300 py-2 px-4 rounded-full text-sm font-mitr transition duration-150 ease-in-out text-white uppercase mt-10">Get started</a>
                 </div>
-                <div class="lg:w-2/5 xl:w-3/5 flex-col">
-                    <img src="../../image/BG.png" alt="BG">
-                </div>
             </div>
-            <section class="bg-violet-200">
-                        <div class="container max-w-5xl mx-auto m-8">
-                    <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Title</h1>
+        </div>
+            <section class="bg-slate-800 relative">
+                <div class="container max-w-5xl mx-auto mt-8">
+                    <div class="w-full mt-12 text-5xl text-center">
+                        <h1 class="pt-10 font-bold text-gray-800">What is SocialSociety?</h1>
+                    </div>
                     <div class="w-full mb-4">
-                        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+                        <div class="h-1 mx-auto bg-gradient-to-r from-pink-500 to-yellow-500 w-64 opacity-25 my-0 py-0"></div>
                     </div>
 
                     <div class="flex flex-wrap">
                         <div class="w-5/6 sm:w-1/2 p-6">
-                            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+                            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">A platform for communicate</h3>
                             <p class="text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.<br /><br />
 
                                 Images from: <a class="text-orange-500 underline" href="https://undraw.co/">undraw.co</a></p>
@@ -198,17 +200,84 @@ import { Head, Link } from '@inertiajs/vue3';
                         </div>
                         <div class="w-full sm:w-1/2 p-6 mt-6">
                             <div class="align-middle">
-                                <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+                                <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Connecting worldwide</h3>
                                 <p class="text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.<br /><br />
                                     Images from: <a class="text-orange-500 underline" href="https://undraw.co/">undraw.co</a></p>
                             </div>
                         </div>
 
                     </div>
+
+                    <div class="flex flex-wrap">
+                        <div class="w-5/6 sm:w-1/2 p-6">
+                            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Bring everyone together to build better product</h3>
+                            <p class="text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.<br /><br />
+
+                                Images from: <a class="text-orange-500 underline" href="https://undraw.co/">undraw.co</a></p>
+
+                        </div>
+                        <div class="w-full sm:w-1/2 p-6">
+                            <svg class="w-full sm:h-64 mx-auto" viewBox="0 0 1177 598.5" xmlns="http://www.w3.org/2000/svg">
+                                <title>travel booking</title>
+                                <path transform="translate(-11.5 -150.75)" d="M274.63,501l-6.29-3.91c-.6-.37-1.19-.77-1.79-1.15a59.86,59.86,0,0,0,6.05-116.62l.31,24.66-13.55-26.83h-.17a59.87,59.87,0,0,0-62.58,57c-.06,1.15,0,2.27,0,3.4-4.71-5.38-9-11.15-11.83-17.47-5.73-12.79-5.84-27.28-5.39-44.9.9-34.9,2.41-70.08,4.37-105.14a59.85,59.85,0,0,0,53.16-56.64c.08-1.83,0-3.63,0-5.43,0-.45,0-.89-.07-1.34-.12-1.74-.28-3.46-.55-5.16,0-.28-.1-.55-.15-.82-.24-1.44-.54-2.86-.88-4.26-.13-.53-.26-1-.4-1.57-.42-1.53-.88-3-1.42-4.52-.18-.49-.39-1-.58-1.46-.42-1.09-.88-2.17-1.37-3.23-.26-.56-.51-1.12-.78-1.67-.08-.14-.13-.29-.21-.43l0,0a59.84,59.84,0,0,0-70.28-30.36l.4,32.1-13.4-26.52a59.57,59.57,0,0,0-28.55,64.51h-.06c.09.43.22.84.32,1.26.19.79.39,1.57.61,2.35.28,1,.6,2,.93,3,.25.74.49,1.47.77,2.2.41,1.06.87,2.09,1.33,3.12.27.6.51,1.22.8,1.81q1.14,2.33,2.48,4.53c.31.52.66,1,1,1.51.64,1,1.28,2,2,2.93.43.59.89,1.16,1.34,1.73.66.83,1.33,1.65,2,2.44.49.57,1,1.12,1.51,1.66.74.78,1.49,1.53,2.27,2.26.52.49,1,1,1.57,1.46.88.79,1.8,1.53,2.73,2.26.47.37.93.75,1.41,1.11,1.42,1,2.88,2,4.39,3,.28.17.59.31.87.48,1.27.74,2.55,1.45,3.87,2.09.57.28,1.15.53,1.73.79,1.08.48,2.17.95,3.29,1.38l2,.7c1.1.37,2.22.72,3.35,1,.66.18,1.33.37,2,.53,1.22.29,2.47.53,3.73.75l.24.05q-1.23,22.19-2.2,44.39a59.83,59.83,0,0,0-83.07-26l10.58,29-21.77-20.9a59.66,59.66,0,0,0-19.34,41.34A58.5,58.5,0,0,0,52.8,354a59.84,59.84,0,0,0,110.06,16.3c0,1.5-.1,3-.14,4.51-.4,15.54-.9,34.88,6.85,52.15,5.25,11.7,13.69,21.21,22,29.73,5.43,5.54,11.06,10.91,16.83,16.1a60.09,60.09,0,0,0,21.62,18c9.48,7.3,19.3,14.17,29.45,20.51l6.34,3.94c5.7,3.53,11.54,7.16,17.26,10.93-1-.1-2-.21-3-.26a59.89,59.89,0,0,0-58.94,39l37.4,30.43-41.14-9.54a59.89,59.89,0,0,0,85.82,53.92l-2.78,3.45q-2.76,3.43-5.45,6.82c-24.34,30.83-31.11,60.09-19.06,82.4l14.66-7.91c-11.73-21.72,5.91-49.52,17.47-64.16q2.64-3.33,5.36-6.7c15.55-19.32,33.17-41.22,32.74-68.08C345.52,545,306.21,520.6,274.63,501Z" fill="#f2f2f2" />
+                                <ellipse cx="588.5" cy="577.5" rx="588.5" ry="21" fill="#3f3d56" />
+                                <path transform="translate(-11.5 -150.75)" d="M119.9,721.42c-3-5.51.4-12.27,4.29-17.18s8.61-10,8.51-16.29c-.15-9-9.7-14.31-17.33-19.09a84,84,0,0,1-15.56-12.51A22.8,22.8,0,0,1,95,650c-1.58-3.52-1.54-7.52-1.44-11.37q.51-19.26,1.91-38.49" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="4" />
+                                <path transform="translate(-11.5 -150.75)" d="M81,599.39a14,14,0,0,1,7-11.5l3.14,6.22-.1-7.53a14.22,14.22,0,0,1,4.63-.56A14,14,0,1,1,81,599.39Z" fill="#57b894" />
+                                <path transform="translate(-11.5 -150.75)" d="M106,694.38a14,14,0,1,0-.68-11.3l8.77,7.13L104.46,688A14,14,0,0,0,106,694.38Z" fill="#57b894" />
+                                <path transform="translate(-11.5 -150.75)" d="M113,667.13a14,14,0,0,0,4.45-27.53l.08,5.78-3.18-6.29h0a14,14,0,0,0-14.67,13.36,13.84,13.84,0,0,0,.6,4.79A14,14,0,0,0,113,667.13Z" fill="#57b894" />
+                                <path transform="translate(-11.5 -150.75)" d="M78.88,644.46a14,14,0,1,0-6.21-26.27l2.48,6.8-5.1-4.9a14,14,0,0,0-4.53,9.69,13.79,13.79,0,0,0,.35,3.87A14,14,0,0,0,78.88,644.46Z" fill="#57b894" />
+                                <path transform="translate(-11.5 -150.75)" d="m82.88 603.13c3.24 0.35 6.39 1.36 9.64 1.56s6.82-0.57 8.88-3.1c1.1-1.36 1.66-3.08 2.59-4.57a10 10 0 0 1 3.54 -3.33 14 14 0 1 1 -26.24 9.31q0.79 0 1.59 0.13z" opacity=".1" />
+                                <path transform="translate(-11.5 -150.75)" d="M78.88,644.46a14,14,0,0,0,13.35-20,10.37,10.37,0,0,0-2.82,2.82c-1,1.51-1.61,3.26-2.78,4.64-2.19,2.57-5.92,3.41-9.31,3.26s-6.66-1.12-10-1.43c-.47,0-.94-.07-1.42-.08A14,14,0,0,0,78.88,644.46Z" opacity=".1" />
+                                <path transform="translate(-11.5 -150.75)" d="M113,667.13a14,14,0,0,0,13.46-19.76,11.48,11.48,0,0,0-3,2.85c-1.09,1.54-1.77,3.32-3,4.74-2.37,2.63-6.35,3.56-9.93,3.48s-6.83-.93-10.28-1.2A14,14,0,0,0,113,667.13Z" opacity=".1" />
+                                <path transform="translate(-11.5 -150.75)" d="M106,694.38a14,14,0,0,0,25.59-11.45,13.84,13.84,0,0,0-3.08,2.75c-1.34,1.62-2.22,3.47-3.76,5-2.87,2.82-7.5,4-11.63,4.09A60,60,0,0,1,106,694.38Z" opacity=".1" />
+                                <path transform="translate(-11.5 -150.75)" d="m141.07 715.07s-11.08-0.34-14.42-2.72-17-5.21-17.86-1.4-16.65 19-4.15 19.06 29.06-1.94 32.4-4 4.03-10.94 4.03-10.94z" fill="#656380" />
+                                <path transform="translate(-11.5 -150.75)" d="m104.42 728.69c12.51 0.1 29.06-2 32.39-4 2.54-1.55 3.55-7.09 3.89-9.65h0.37s-0.7 8.94-4 11-19.89 4.07-32.4 4c-3.61 0-4.85-1.31-4.78-3.21 0.47 1.17 1.84 1.83 4.53 1.86z" opacity=".2" />
+                                <rect x="171.5" y="111.25" width="834" height="456" rx="20.42" fill="#f2f2f2" />
+                                <path d="m172 133.75h268v434h-247.58a20.42 20.42 0 0 1 -20.42 -20.42v-413.58z" fill="#ff6347" />
+                                <path transform="translate(-11.5 -150.75)" d="M1017,282.42V294H183V282.42A20.42,20.42,0,0,1,203.42,262H996.58A20.42,20.42,0,0,1,1017,282.42Z" fill="#3f3d56" />
+                                <circle cx="193" cy="127.75" r="6" fill="#ff6347" />
+                                <circle cx="208" cy="127.75" r="6" fill="#ff6347" />
+                                <circle cx="223" cy="127.75" r="6" fill="#ff6347" />
+                                <path transform="translate(-11.5 -150.75)" d="M387.5,490A66.5,66.5,0,1,1,321,423.5,66.47,66.47,0,0,1,387.5,490Z" fill="none" stroke="#f2f2f2" stroke-miterlimit="10" stroke-width="2" />
+                                <path transform="translate(-11.5 -150.75)" d="M325.38,467.23l8.3,13,35.53,55.59a66.5,66.5,0,0,1-103.32-8.57l43.54-84.94.91,1.43" fill="none" stroke="#f2f2f2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                <path transform="translate(-11.5 -150.75)" d="M385.31,507a66.46,66.46,0,0,1-16.1,28.82l-35.53-55.59,15.69-24.78a.66.66,0,0,1,1.1,0C353.76,460.32,371,486,385.31,507Z" fill="none" stroke="#f2f2f2" stroke-miterlimit="10" stroke-width="2" />
+                                <path transform="translate(-11.5 -150.75)" d="M337.5,452.5a15,15,0,0,1-12.12,14.73l-15-23.51a15,15,0,0,1,27.16,8.78Z" fill="none" stroke="#f2f2f2" stroke-miterlimit="10" stroke-width="2" />
+                                <path transform="translate(-11.5 -150.75)" d="m347.5 481.5" fill="none" stroke="#f2f2f2" stroke-miterlimit="10" stroke-width="2" />
+                                <path transform="translate(-11.5 -150.75)" d="m333.5 480.5" fill="none" stroke="#f2f2f2" stroke-miterlimit="10" stroke-width="2" />
+                                <path transform="translate(-11.5 -150.75)" d="M563.51,413.13c-.35,0-1.51,0-1.83,0l-6.61.17a.19.19,0,0,1-.17-.09L545,398.42a1.61,1.61,0,0,0-1.37-.75h-2.41c-.57,0-.77.57-.56,1.1l5.09,14.52a.2.2,0,0,1-.18.28l-12.45.18a.81.81,0,0,1-.67-.31l-3.77-4.58a1.59,1.59,0,0,0-1.28-.62h-1.71a.4.4,0,0,0-.38.54l2,7a1.68,1.68,0,0,1,0,1.21l-2,7a.39.39,0,0,0,.38.53h1.7a1.62,1.62,0,0,0,1.28-.62l3.84-4.64a.82.82,0,0,1,.67-.32l12.38.27a.21.21,0,0,1,.18.28L540.65,434c-.21.53,0,1.1.56,1.1h2.41a1.61,1.61,0,0,0,1.37-.76l9.91-14.81a.2.2,0,0,1,.17-.09l6.61.17c.33,0,1.48,0,1.83,0,4.5,0,7.35-1.45,7.35-3.25S568,413.13,563.51,413.13Z" fill="#3f3d56" />
+                                <path transform="translate(-11.5 -150.75)" d="M548.32,532.86a.41.41,0,0,0-.51,0l-15.87,12.7a.42.42,0,0,0-.15.31v23.4a.21.21,0,0,0,.2.21h11a.21.21,0,0,0,.2-.21V555a.21.21,0,0,1,.21-.2h9.36a.2.2,0,0,1,.2.2v14.24a.21.21,0,0,0,.2.21h11a.21.21,0,0,0,.2-.21v-23.4a.4.4,0,0,0-.15-.31Z" fill="#3f3d56" />
+                                <path transform="translate(-11.5 -150.75)" d="M568.69,543.05l-19.23-15.41a2.23,2.23,0,0,0-1.39-.48,2.26,2.26,0,0,0-1.4.48l-8.37,6.81v-4.29a.2.2,0,0,0-.2-.21H532a.2.2,0,0,0-.2.21v9.38l-4.34,3.57a1.41,1.41,0,0,0-.54,1,1.45,1.45,0,0,0,.41,1.09,1.41,1.41,0,0,0,1,.42,1.47,1.47,0,0,0,.9-.31l18.7-15.06a.22.22,0,0,1,.14,0,.24.24,0,0,1,.13,0l18.71,15a1.44,1.44,0,0,0,2.33-1.19,1.45,1.45,0,0,0-.55-1Z" fill="#3f3d56" />
+                                <rect x="604" y="260.14" width="347" height="11" rx="1.24" fill="#ff6347" opacity=".3" />
+                                <rect x="604" y="392.07" width="347" height="11" rx="1.24" fill="#ff6347" opacity=".3" />
+                                <rect x="878" y="279.75" width="73" height="25" rx="1.24" fill="#ff6347" />
+                                <rect x="878" y="411.75" width="73" height="25" rx="1.24" fill="#ff6347" />
+                                <path transform="translate(-11.5 -150.75)" d="m978.18 606.93l-1.73 2s-21.05 2-20.2 5.39 25.35-4.55 25.35-4.55z" fill="#ffc1c7" />
+                                <path transform="translate(-11.5 -150.75)" d="m1016.3 605.22s-22.5 8-34.74 4.56l5.69 11.39s29.05-0.86 34.18-6-5.13-9.95-5.13-9.95z" fill="#ff6584" />
+                                <path transform="translate(-11.5 -150.75)" d="m1016.3 605.22s-22.5 8-34.74 4.56l5.69 11.39s29.05-0.86 34.18-6-5.13-9.95-5.13-9.95z" opacity=".1" />
+                                <circle cx="989.6" cy="378.29" r="15.09" fill="#ffc1c7" />
+                                <path transform="translate(-11.5 -150.75)" d="m1014 543.21a11.85 11.85 0 0 0 2 2.71 24.62 24.62 0 0 0 7.28 5.44 246.74 246.74 0 0 1 -25.93 3.86c0.92-3.24-0.29-6.7-1.91-9.64s-3.7-5.69-4.72-8.9l10.2 0.28c1.85 0 3.71 0.1 5.56 0 1.39-0.07 3.69-0.9 5-0.59 2.64 0.63 1.3 4.42 2.52 6.84z" fill="#ffc1c7" />
+                                <path transform="translate(-11.5 -150.75)" d="M1048.24,614.05l8.54,10.25S1071,657.62,1040,661s-54.11-2.57-54.11-2.57-12.53-6-12.82-1.42-1.42,17.37-8.26,29.9l-6,13.67a8.84,8.84,0,0,0-2.27,7.41c.85,4.27-19.09,5.69-18.8,0,0,0,2.85-4.84,2.85-7.69s4.55-9.68,4.55-9.68l8.26-41s-.57-21.08,18.8-17.09,47-.86,47-.86l6.26-21.92Z" fill="#575a89" />
+                                <path transform="translate(-11.5 -150.75)" d="M1048.24,614.05l8.54,10.25S1071,657.62,1040,661s-54.11-2.57-54.11-2.57-12.53-6-12.82-1.42-1.42,17.37-8.26,29.9l-6,13.67a8.84,8.84,0,0,0-2.27,7.41c.85,4.27-19.09,5.69-18.8,0,0,0,2.85-4.84,2.85-7.69s4.55-9.68,4.55-9.68l8.26-41s-.57-21.08,18.8-17.09,47-.86,47-.86l6.26-21.92Z" opacity=".1" />
+                                <path transform="translate(-11.5 -150.75)" d="m1086.8 648.79v8.55a1 1 0 0 1 -1 1 1 1 0 0 1 -1 -1v-7.12a1 1 0 0 0 -1 -1h-18.82a1 1 0 0 0 -1 1v7.12a1 1 0 0 1 -1 1 1 1 0 0 1 -1 -1v-8.55a1 1 0 0 1 1 -1h22.78a1 1 0 0 1 1.04 1z" fill="#3c354c" />
+                                <path transform="translate(-11.5 -150.75)" d="M999.16,721.79a5.79,5.79,0,0,0,5.14,6l134.88,3.33a.41.41,0,0,0,.32-.11h0a.31.31,0,0,0,.11-.2l1.79-8.32a6.38,6.38,0,0,0,.13-1.44l-2.88-60.37a5.65,5.65,0,0,0-.84-2.8l-2-3.36a1.12,1.12,0,0,0-.25-.28,1,1,0,0,0-.61-.2l-127,1.89a5.8,5.8,0,0,0-5.71,5.53Z" fill="#3f3d56" />
+                                <path transform="translate(-11.5 -150.75)" d="M1135.53,654.27l4,76.78h0l.11-.2,1.79-8.32a6.38,6.38,0,0,0,.13-1.44l-2.88-60.37a5.65,5.65,0,0,0-.84-2.8l-2-3.36A1.12,1.12,0,0,0,1135.53,654.27Z" opacity=".1" />
+                                <path transform="translate(-11.5 -150.75)" d="m1016.2 613.3s26.06-9.79 40.58 11c0 0 3.7 32.18-11.11 33.6s-34.17 1.14-38.73-3.7-33.32-18.51-33.32-18.51-14.32-7.3-17.12 2.19-3.1 11.77-3.1 11.77-14.81 10.82-20.79 12.81c0 0-4 5.7-6.26 5.7s-16.23 3.13-14.81-7.41l23.07-21.07 23.06-22.5s6.55-9.68 23.36-4.56a346.13 346.13 0 0 0 33.89 8.26z" fill="#575a89" />
+                                <path transform="translate(-11.5 -150.75)" d="M955.68,707.46s5.41,13.67.86,15.38-14.24.57-14.24.57-11.4-1.43-14.24-1.14-14.53-2-12.82-6.55,10.54-3.42,10.54-3.42l8-3.7s.86-2.85,2.85-1.71S944.29,712.3,955.68,707.46Z" fill="#cbceda" />
+                                <path transform="translate(-11.5 -150.75)" d="m926.06 667s6 13.38-3.7 12.24-17.09-3.13-19.93-3.41-10.49-2.92-9.3-8.19a4.52 4.52 0 0 0 0.08 -1c0-0.71 1-2.09 8.65-1.88 0 0 5.69 0 8-4-0.03-0.01 8.51 10.81 16.2 6.24z" fill="#cbceda" />
+                                <path transform="translate(-11.5 -150.75)" d="m990.71 553.1s20.5-12.81 37.59 0 28.48 71.2 28.48 71.2l-39.59-8.83s-1.7-6.83-4-8-2.57-6-2.57-6-12.24-3.7-11.39-17.94-8.52-30.43-8.52-30.43z" fill="#ff6584" />
+                                <path transform="translate(-11.5 -150.75)" d="m1001.2 553.67h-10.54s-6.27 7.12-7.12 25.06l-3.42 14.27s-7.12 17.09-2.85 19.94 12.54 2.56 14.24-3.13 13.44-38.76 13.44-38.76z" fill="#ff6584" />
+                                <path transform="translate(-11.5 -150.75)" d="M998.23,509.4A15.27,15.27,0,0,1,1014,512c5.47,4.88,6.57,12.85,8,20s4.17,15.21,11,18a28.35,28.35,0,0,1-9.19-.27l10.25,9.19-17.27-5.63c-5.42-1.77-11.11-3.56-16.72-2.56-9.3,1.65-15.78,10.4-24.71,13.47l1-4.85-6,0a11.75,11.75,0,0,0,3.43-4,3.27,3.27,0,0,0-2.29-1.2c-2.5-15.59,6.76-31,18.81-41.17,2.38-2,5-3.92,8.06-4.42s6.64.87,7.71,3.78" fill="#3c354c" />
+                            </svg>
+
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="bg-white p-8 md:p-16">
                 <div class="container max-w-screen-xl mx-auto px-4">
+                    <div class="w-full mx-auto mt-4">
+                        <h1 class="py-7 mb-5 text-3xl">Who will this tools benefit from</h1>
+                    </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 xl:grids-cols-3">
                         <div class="text-center mb-10 xl:mb-0">
                             <div class="flex items-center justify-center">
@@ -273,7 +342,7 @@ import { Head, Link } from '@inertiajs/vue3';
                                 </div>
                             </div>
                             <h2 class="font-semibold text-gray-700 text-xl md:text-3xl mb-5">
-                                Maki Roll
+                                Developer team
                             </h2>
                             <p class="font-normal text-gray-400 text-sm md:text-lg">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, maxime?
@@ -286,7 +355,7 @@ import { Head, Link } from '@inertiajs/vue3';
                                 </div>
                             </div>
                             <h2 class="font-semibold text-gray-700 text-xl md:text-3xl mb-5">
-                                Maki Roll
+                                Study group
                             </h2>
                             <p class="font-normal text-gray-400 text-sm md:text-lg">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, maxime?
@@ -295,17 +364,163 @@ import { Head, Link } from '@inertiajs/vue3';
                     </div>
                 </div>
             </section>
+
+            <section class="bg-slate-800">
+                <!-- Testimonials -->
+<div class="overflow-hidden">
+  <div class="relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <!-- Title -->
+    <div class="max-w-2xl w-3/4 lg:w-1/2 mb-6 sm:mb-10 md:mb-16">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl text-white font-semibold">
+        Loved by business and individuals across the globe
+      </h2>
+    </div>
+    <!-- End Title -->
+
+    <!-- Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card -->
+      <div class="flex h-auto">
+        <div class="flex flex-col bg-white rounded-xl dark:bg-slate-900">
+          <div class="flex-auto p-4 md:p-6">
+            <p class="text-base italic md:text-lg text-gray-800 dark:text-gray-200">
+              " With Preline, we're able to easily track our performance in full detail. It's become an essential tool for us to grow and engage with our audience. "
+            </p>
+          </div>
+
+          <div class="p-4 bg-gray-100 rounded-b-xl md:px-7 dark:bg-slate-700">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <img class="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
+              </div>
+
+              <div class="grow ml-3">
+                <p class="text-sm sm:text-base font-semibold text-gray-800 dark:text-gray-200">
+                  Josh Tyson
+                </p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">
+                  Product Manager | Capsule
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="flex h-auto">
+        <div class="flex flex-col bg-white rounded-xl dark:bg-slate-900">
+          <div class="flex-auto p-4 md:p-6">
+            <p class="text-base italic md:text-lg text-gray-800 dark:text-gray-200">
+              " In September, I will be using this theme for 2 years. I went through multiple updates and changes and I'm very glad to see the consistency and effort made by the team. "
+            </p>
+          </div>
+
+          <div class="p-4 bg-gray-100 rounded-b-xl md:px-7 dark:bg-slate-700">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <img class="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
+              </div>
+
+              <div class="grow ml-3">
+                <p class="text-sm sm:text-base font-semibold text-gray-800 dark:text-gray-200">
+                  Luisa
+                </p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">
+                  Senior Director of Operations | Fitbit
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <div class="flex h-auto">
+        <div class="flex flex-col bg-white rounded-xl dark:bg-slate-900">
+          <div class="flex-auto p-4 md:p-6">
+            <p class="text-base italic md:text-lg text-gray-800 dark:text-gray-200">
+              " Refreshing and Thought provoking design and it changes my view about how I design the websites. Great typography, modern clean white design, nice tones of the color. "
+            </p>
+          </div>
+
+          <div class="p-4 bg-gray-100 rounded-b-xl md:px-7 dark:bg-slate-700">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <img class="h-8 w-8 rounded-full sm:h-[2.875rem] sm:w-[2.875rem]" src="https://images.unsplash.com/photo-1579017331263-ef82f0bbc748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80" alt="Image Description">
+              </div>
+
+              <div class="grow ml-3">
+                <p class="text-sm sm:text-base font-semibold text-gray-800 dark:text-gray-200">
+                  Alisa Williams
+                </p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">
+                  Entrepreneur | Happy customer
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+    </div>
+    <!-- End Grid -->
+
+    <!-- Grid -->
+    <div class="mt-20 grid gap-6 grid-cols-2 sm:gap-12 lg:grid-cols-3 lg:gap-8">
+      <!-- Stats -->
+      <div>
+        <h4 class="text-lg sm:text-xl font-semibold text-white">Accuracy rate</h4>
+        <p class="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-blue-500">99.95%</p>
+        <p class="mt-1 text-gray-400">in fulfilling orders</p>
+      </div>
+      <!-- End Stats -->
+
+      <!-- Stats -->
+      <div>
+        <h4 class="text-lg sm:text-xl font-semibold text-white">Startup businesses</h4>
+        <p class="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-blue-500">2,000+</p>
+        <p class="mt-1 text-gray-400">partner with Preline</p>
+      </div>
+      <!-- End Stats -->
+
+      <!-- Stats -->
+      <div>
+        <h4 class="text-lg sm:text-xl font-semibold text-white">Happy customer</h4>
+        <p class="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-blue-500">85%</p>
+        <p class="mt-1 text-gray-400">this year alone</p>
+      </div>
+      <!-- End Stats -->
+    </div>
+    <!-- End Grid -->
+
+    <!-- SVG Element -->
+    <div class="absolute bottom-0 right-0 transform lg:translate-x-32" aria-hidden="true">
+      <svg class="w-40 h-auto sm:w-72" width="1115" height="636" viewBox="0 0 1115 636" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.990203 279.321C-1.11035 287.334 3.68307 295.534 11.6966 297.634L142.285 331.865C150.298 333.965 158.497 329.172 160.598 321.158C162.699 313.145 157.905 304.946 149.892 302.845L33.8132 272.418L64.2403 156.339C66.3409 148.326 61.5475 140.127 53.5339 138.026C45.5204 135.926 37.3213 140.719 35.2207 148.733L0.990203 279.321ZM424.31 252.289C431.581 256.26 440.694 253.585 444.664 246.314C448.635 239.044 445.961 229.931 438.69 225.96L424.31 252.289ZM23.0706 296.074C72.7581 267.025 123.056 230.059 187.043 212.864C249.583 196.057 325.63 198.393 424.31 252.289L438.69 225.96C333.77 168.656 249.817 164.929 179.257 183.892C110.144 202.465 54.2419 243.099 7.92943 270.175L23.0706 296.074Z" fill="currentColor" class="fill-orange-500"/>
+        <path d="M451.609 382.417C446.219 388.708 446.95 398.178 453.241 403.567L555.763 491.398C562.054 496.788 571.524 496.057 576.913 489.766C582.303 483.474 581.572 474.005 575.281 468.615L484.15 390.544L562.222 299.413C567.612 293.122 566.881 283.652 560.59 278.263C554.299 272.873 544.829 273.604 539.44 279.895L451.609 382.417ZM837.202 559.655C841.706 566.608 850.994 568.593 857.947 564.09C864.9 559.586 866.885 550.298 862.381 543.345L837.202 559.655ZM464.154 407.131C508.387 403.718 570.802 395.25 638.136 410.928C704.591 426.401 776.318 465.66 837.202 559.655L862.381 543.345C797.144 442.631 718.724 398.89 644.939 381.709C572.033 364.734 504.114 373.958 461.846 377.22L464.154 407.131Z" fill="currentColor" class="fill-cyan-500"/>
+        <path d="M447.448 0.194357C439.203 -0.605554 431.87 5.43034 431.07 13.6759L418.035 148.045C417.235 156.291 423.271 163.623 431.516 164.423C439.762 165.223 447.095 159.187 447.895 150.942L459.482 31.5025L578.921 43.0895C587.166 43.8894 594.499 37.8535 595.299 29.6079C596.099 21.3624 590.063 14.0296 581.818 13.2297L447.448 0.194357ZM1086.03 431.727C1089.68 439.166 1098.66 442.239 1106.1 438.593C1113.54 434.946 1116.62 425.96 1112.97 418.521L1086.03 431.727ZM434.419 24.6572C449.463 42.934 474.586 81.0463 521.375 116.908C568.556 153.07 637.546 187.063 742.018 200.993L745.982 171.256C646.454 157.985 582.444 125.917 539.625 93.0974C496.414 59.978 474.537 26.1903 457.581 5.59138L434.419 24.6572ZM742.018 200.993C939.862 227.372 1054.15 366.703 1086.03 431.727L1112.97 418.521C1077.85 346.879 956.138 199.277 745.982 171.256L742.018 200.993Z" fill="currentColor" class="fill-white"/>
+      </svg>
+    </div>
+    <!-- End SVG Element -->
+  </div>
+</div>
+<!-- End Testimonials -->
+            </section>
+
             <section class="bg-indigo-200">
-                <div class="flex flex-shrink px-4 max-w-full sm:w-1/2 md:w-5/12 text-center">
-                    <h2 class="text-2xl leading-normal mb-2 font-bold">
-                        <span>OUR TEAM</span>
-                    </h2>
+                <div class="max-w-2xl mx-auto text-right mb-10 lg:mb-14">
+                    <h2 class="text-4xl pt-7 mb-2 font-bold">OUR TEAM</h2>
                 </div>
                 <div class="flex flex-wrap flex-row -mx-4 mb-10 justify-center">
-                    <div class="max-w-full mb-11 px-4 pt-4 w-2/3 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6 bg-slate-100 border border-zinc-200 rounded-lg">
-                        <div class="relative overflow-hidden mb-2">
-                            <div class="relative overflow-hidden px-6">
-                                <img src="/image/AonProfile.png" class="max-w-full h-auto rounded-full bg-gray-50 hover:grayscale" alt="profilePic">
+
+                    <!-- My Profile -->
+                    <div class="flex-shrink max-w-full mb-11 px-7 pt-4 w-2/3 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6 ">
+                        <div class="relative overflow-hidden mb-2 bg-slate-100 border border-zinc-200 rounded-lg">
+                            <div class="relative overflow-hidden px-6 translate-x-1/4">
+                                <img src="/image/OurTeam/Aon.png" class="w-32 h-32 rounded-full bg-gray-50" alt="profilePic">
                             </div>
                             <div class="pt-6 text-center">
                                 <p class="text-lg leading-normal font-bold mb-1">
@@ -324,18 +539,194 @@ import { Head, Link } from '@inertiajs/vue3';
                             </div>
                         </div>
                     </div>
+                    <!-- End of my Profile -->
+
+                    <!-- Dummy Person -->
+                    <div class="flex-shrink max-w-full px-7 w-2/3 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6">
+                        <div class="relative overflow-hidden bg-slate-100 border border-zinc-200 rounded-lg">
+                            <div class="relative overflow-hidden px-6 translate-x-1/4 ">
+                                <img src="/image/OurTeam/Luara.png" class="w-32 h-32 rounded-full bg-gray-50" alt="profilePic">
+                            </div>
+                            <div class="pt-6 text-center">
+                                <p class="text-lg leading-normal font-bold mb-1">Luara Kingston</p>
+                                <p class="text-gray-500 leading-relaxed font-light">Marketing</p>
+                                <!-- social icon -->
+                                <div class="mt-2 mb-5 space-x-2">
+                                    <a class="hover:text-blue-700" aria-label="Twitter link" href="#">
+                                        <!-- <i class="fab fa-twitter text-twitter"></i> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="1rem" height="1rem" viewBox="0 0 512 512">
+                                            <path fill="currentColor" d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="hover:text-blue-700" aria-label="Facebook link" href="#">
+                                        <!-- <i class="fab fa-facebook text-facebook"></i> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="1rem" height="1rem" viewBox="0 0 512 512">
+                                            <path fill="currentColor" d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="hover:text-blue-700" aria-label="Instagram link" href="#">
+                                        <!-- <i class="fab fa-instagram text-instagram"></i> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="1rem" height="1rem" viewBox="0 0 512 512">
+                                            <path fill="currentColor" d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"></path>
+                                            <path fill="currentColor" d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"></path>
+                                            <path fill="currentColor" d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="hover:text-blue-700" aria-label="Linkedin link" href="#">
+                                        <!-- <i class="fab fa-linkedin text-linkedin"></i> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="1rem" height="1rem" viewBox="0 0 512 512">
+                                            <path fill="currentColor" d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End dummy Person -->
+
+                    <!-- dummy people -->
+                    <div class="flex-shrink max-w-full px-4 w-2/3 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6">
+                        <div class="relative overflow-hidden bg-white dark:bg-gray-800 mb-12 hover-grayscale-0 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                            <div class="relative overflow-hidden px-6">
+                                <img src="https://tailone.tailwindtemplate.net/src/img/dummy/avatar2.png" class="max-w-full h-auto mx-auto rounded-full bg-gray-50 grayscale" alt="title image">
+                            </div>
+                            <div class="pt-6 text-center">
+                                <p class="text-lg leading-normal font-bold mb-1">Steve Porter</p>
+                                <p class="text-gray-500 leading-relaxed font-light">Platform Engineer</p>
+                                <!-- social icon -->
+                                <div class="mt-2 mb-5 space-x-2">
+                                    <a class="hover:text-blue-700" aria-label="Twitter link" href="#">
+                                        <!-- <i class="fab fa-twitter text-twitter"></i> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="1rem" height="1rem" viewBox="0 0 512 512">
+                                            <path fill="currentColor" d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="hover:text-blue-700" aria-label="Facebook link" href="#">
+                                        <!-- <i class="fab fa-facebook text-facebook"></i> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="1rem" height="1rem" viewBox="0 0 512 512">
+                                            <path fill="currentColor" d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="hover:text-blue-700" aria-label="Instagram link" href="#">
+                                        <!-- <i class="fab fa-instagram text-instagram"></i> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="1rem" height="1rem" viewBox="0 0 512 512">
+                                            <path fill="currentColor" d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"></path>
+                                            <path fill="currentColor" d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"></path>
+                                            <path fill="currentColor" d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="hover:text-blue-700" aria-label="Linkedin link" href="#">
+                                        <!-- <i class="fab fa-linkedin text-linkedin"></i> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="1rem" height="1rem" viewBox="0 0 512 512">
+                                            <path fill="currentColor" d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End dummy people -->
+                    
+
                 </div>
             </section>
-            <section class="bg-white">
-                <div class="w-full mx-auto max-w-screen-3xl">
-                    <div class="relative">
-                        <h1>
-                            Hello
-                        </h1>
+
+            <!-- footer -->
+            <!-- component -->
+            <footer class="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100">
+            <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <div>
+                <img src="#" class="mr-5 h-6 sm:h-9" alt="logo" />
+                    <p class="max-w-xs mt-4 text-sm text-gray-600">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
+                    </p>
+                    <div class="flex mt-8 space-x-6 text-gray-600">
+                    <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                        <span class="sr-only"> Facebook </span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+                        </svg>
+                    </a>
+                    <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                        <span class="sr-only"> Instagram </span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
+                        </svg>
+                    </a>
+                    <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                        <span class="sr-only"> Twitter </span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                    </a>
+                    <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                        <span class="sr-only"> GitHub </span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                        </svg>
+                    </a>
+                    <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                        <span class="sr-only"> Dribbble </span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clipRule="evenodd" />
+                        </svg>
+                    </a>
                     </div>
                 </div>
-            </section>
-        </div>
+                <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+                    <div>
+                    <p class="font-medium">
+                        SocialSociety
+                    </p>
+                    <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                        <a class="hover:opacity-75" href> About </a>
+                        <a class="hover:opacity-75" href> Meet the Team </a>
+                        <a class="hover:opacity-75" href> History </a>
+                        <a class="hover:opacity-75" href> Careers </a>
+                    </nav>
+                    </div>
+                    <div>
+                    <p class="font-medium">
+                        Services
+                    </p>
+                    <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                        <a class="hover:opacity-75" href> 1on1 Coaching </a>
+                        <a class="hover:opacity-75" href> Company Review </a>
+                        <a class="hover:opacity-75" href> Accounts Review </a>
+                        <a class="hover:opacity-75" href> HR Consulting </a>
+                        <a class="hover:opacity-75" href> SEO Optimisation </a>
+                    </nav>
+                    </div>
+                    <div>
+                    <p class="font-medium">
+                        Helpful Links
+                    </p>
+                    <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                        <a class="hover:opacity-75" href> Contact </a>
+                        <a class="hover:opacity-75" href> FAQs </a>
+                        <a class="hover:opacity-75" href> Live Chat </a>
+                    </nav>
+                    </div>
+                    <div>
+                    <p class="font-medium">
+                        Legal
+                    </p>
+                    <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                        <a class="hover:opacity-75" href> Privacy Policy </a>
+                        <a class="hover:opacity-75" href> Terms &amp; Conditions </a>
+                        <a class="hover:opacity-75" href> Returns Policy </a>
+                        <a class="hover:opacity-75" href> Accessibility </a>
+                    </nav>
+                    </div>
+                </div>
+                </div>
+                <p class="mt-8 text-xs text-gray-800">
+                © 2023 SocialSociety
+                </p>
+            </div>
+            </footer>
+        
     </div>
 </template>
 
