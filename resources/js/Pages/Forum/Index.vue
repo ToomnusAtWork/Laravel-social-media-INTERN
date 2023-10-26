@@ -45,7 +45,7 @@ watch(searchQuery, (query) => {
 </script>
 
 <template>
-    <Head title="Home" />
+    <Head title="Forum" />
 
     <ForumLayout>
         <div class="space-y-6">

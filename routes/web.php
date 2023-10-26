@@ -38,8 +38,8 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/', ForumIndexController::class)->name('home');
-Route::get('/homie', IndexController::class);
+Route::get('/forum', ForumIndexController::class);
+Route::get('/', IndexController::class)->name('home');;
 Route::get('/discussions/{discussion:slug}', DiscussionShowController::class)->name('discussions.show');
 
 Route::get('/chat', [ChatMessageController::class, 'index'])->name('chat');
