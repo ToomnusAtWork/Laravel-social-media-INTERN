@@ -10,85 +10,88 @@ import { Head, Link } from '@inertiajs/vue3';
 
     <div>
         <div class="bg-white max-h-screen">
-            <nav class="relative border-b border-gray-100">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex flex-wrap h-16 justify-between">
-                        <Link :href="route('home')">
-                            <div class="flex mt-5 w-auto">
-                                <ApplicationLogo/>
-                                <div class="mx-3 relative content-center">
-                                    <span class="font-bold text-xl">SocialSociety</span>
-                                </div>
-                            </div>
-                        </Link>
-
-                        <div class="hidden space-x-11 sm:-my-px sm:ml-10 sm:flex ">
-                            <NavLink :href="route('home')" :active="route().current('home')">
-                                Forum
-                            </NavLink>
-                            <NavLink :href="route('chat')" :active="route().current('chat')" >
-                                Chat
-                            </NavLink>
-                            <NavLink>
-                                Login
-                            </NavLink>
-                            <NavLink>
-                                <button id="navAction" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">Register</button>
-                            </NavLink>
-                        </div>
-
-                        <div class="-mr-2 flex items-center sm:hidden">
-                            <button
-                                @click="showingNavigationDropdown = !showingNavigationDropdown"
-                                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                            >
-                                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                    <path
-                                        :class="{
-                                            hidden: showingNavigationDropdown,
-                                            'inline-flex': !showingNavigationDropdown,
-                                        }"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M4 6h16M4 12h16M4 18h16"
-                                    />
-                                    <path
-                                        :class="{
-                                            hidden: !showingNavigationDropdown,
-                                            'inline-flex': showingNavigationDropdown,
-                                        }"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <div class="bg-cover absolute w-full sm:w-full md:w-3/5 xl:w-3/5 h-full right-0"
+			<div class="bg-cover absolute w-full sm:w-full md:w-3/5 xl:w-3/5 h-full right-0"
                 style="background-image: url('../../image/BG.png');"></div>
-            <div class="flex min-h-screen container mx-auto lg:px-2 md:px-20 items-center ">
-                <div class="lg:w-2/5 xl:w-2/5 md:w-1/3  flex flex-col items-start relative">
-                    <h1 class="font-roboto-slab font-bold lg:text-5xl text-2xl sm:text-3xl text-red-400 leading-tight mt-4">
-                        Start engaging with your team now!
-                    </h1>
-                    <div class="max-w-md">
-                        <p class="font-source-sans-pro text-indigo-500 mt-6 text-lg">
-                            SocialSociety can enhance team collaboration and productivity, 
-                            thereby leading to greater success in organizing efforts.
-                        </p>
-                    </div>
-                    <a href="#" class="block bg-indigo-500 hover:bg-purple-300 py-2 px-4 rounded-full text-sm font-mitr transition duration-150 ease-in-out text-white uppercase mt-10">Get started</a>
-                </div>
-            </div>
+				<nav class="relative">
+					<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+						<div class="flex flex-wrap h-16 justify-between">
+							<Link :href="route('home')">
+								<div class="flex mt-5 w-auto">
+									<ApplicationLogo/>
+									<div class="mx-3 relative content-center">
+										<span class="font-bold text-xl">SocialSociety</span>
+									</div>
+								</div>
+							</Link>
+
+							<div class="hidden space-x-11 sm:-my-px sm:ml-10 sm:flex ">
+								<NavLink :href="route('forum')" class="text-violet-600">
+									Forum
+								</NavLink>
+								<NavLink :href="route('chat')" class="text-violet-600">
+									Chat
+								</NavLink>
+								<NavLink :href="route('login')" class="text-violet-600">
+										Login
+								</NavLink>
+								<NavLink :href="route('register')">
+									<button id="navAction" class="mx-auto lg:mx-0 hover:underline text-violet-600 bg-white border-violet-600 border-2 font-bold rounded-full lg:mt-0 py-4 px-8 shadow opacity-75">
+										Register
+									</button>
+								</NavLink>
+							</div>
+
+							<div class="-mr-2 flex items-center sm:hidden">
+								<button
+									@click="showingNavigationDropdown = !showingNavigationDropdown"
+									class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+								>
+									<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+										<path
+											:class="{
+												hidden: showingNavigationDropdown,
+												'inline-flex': !showingNavigationDropdown,
+											}"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M4 6h16M4 12h16M4 18h16"
+										/>
+										<path
+											:class="{
+												hidden: !showingNavigationDropdown,
+												'inline-flex': showingNavigationDropdown,
+											}"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M6 18L18 6M6 6l12 12"
+										/>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+				</nav>
+			<div class="container min-h-screen">
+				<div class="pt-12 lg:w-2/5 lg:pl-16 xl:w-2/5 md:w-1/3 md:px-7 flex flex-col items-start relative">
+					<h1 class="font-roboto-slab font-bold lg:text-6xl md:text-5xl text-2xl sm:text-3xl text-red-400 leading-tight mt-4">
+						Start engaging with your team now!
+					</h1>
+					<div class="max-w-md">
+						<p class="font-source-sans-pro text-indigo-500 mt-6 text-lg">
+							SocialSociety can enhance team collaboration and productivity, 
+							thereby leading to greater success in organizing efforts.
+						</p>
+					</div>
+					<a href="#" class="block bg-indigo-500 hover:bg-purple-300 py-2 px-4 rounded-full text-sm font-mitr transition duration-150 ease-in-out text-white uppercase mt-10">Get started</a>
+				</div>
+			</div> 
         </div>
-            <section class="bg-slate-800 relative">
-                <div class="container max-w-5xl mx-auto mt-8">
-                    <div class="w-full mt-12 text-5xl text-center">
+
+            <section class="bg-slate-800 relative ">
+                <div class="container max-w-5xl mx-auto ">
+                    <div class="w-full text-5xl text-center">
                         <h1 class="pt-10 font-bold text-slate-100">What is SocialSociety?</h1>
                     </div>
                     <div class="w-full mb-4">
@@ -2097,14 +2100,17 @@ import { Head, Link } from '@inertiajs/vue3';
 
             <!-- footer -->
             <!-- component -->
-            <footer class="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100">
+            <footer class="bg-gradient-to-r from-gray-100 via-[#B1A6FF] to-[#FFC66A]">
             <div class="max-w-full px-4 py-16 mx-auto sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <div>
-                <img src="#" class="mr-5 h-6 sm:h-9" alt="logo" />
-                    <p class="max-w-xs mt-4 text-sm text-gray-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
-                    </p>
+					<Link :href="route('home')">
+						<div class="flex mt-5 w-auto">
+							<div class="mx-3 relative content-center">
+								<span class="font-bold text-xl">SocialSociety</span>
+							</div>
+						</div>
+					</Link>
                     <div class="flex mt-8 space-x-6 text-gray-600">
                     <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
                         <span class="sr-only"> Facebook </span>
@@ -2149,7 +2155,6 @@ import { Head, Link } from '@inertiajs/vue3';
                         Services
                     </p>
                     <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                        <a class="hover:opacity-75" href> 1on1 Coaching </a>
                         <a class="hover:opacity-75" href> Company Review </a>
                         <a class="hover:opacity-75" href> Accounts Review </a>
                         <a class="hover:opacity-75" href> HR Consulting </a>

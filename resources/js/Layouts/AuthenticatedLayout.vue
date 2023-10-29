@@ -29,7 +29,7 @@ const showingNavigationDropdown = ref(false);
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <NavLink :href="route('home')" :active="route().current('home')">
+                                <NavLink :href="route('forum')" :active="route().current('forum')">
                                     Forum
                                 </NavLink>
                                 <NavLink :href="route('chat')" :active="route().current('chat')" >
@@ -126,6 +126,10 @@ const showingNavigationDropdown = ref(false);
                         <ResponsiveNavLink :href="route('home')" :active="route().current('home')">
                             Forum
                         </ResponsiveNavLink>
+
+                        <!-- <NavLink :href="route('forum')" :active="route().current('home')" class="text-violet-600">
+                                Forum
+                        </NavLink> -->
                     </div>
 
                     <!-- Responsive Settings Options -->
