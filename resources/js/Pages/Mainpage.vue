@@ -84,7 +84,7 @@ import { Head, Link } from '@inertiajs/vue3';
 							thereby leading to greater success in organizing efforts.
 						</p>
 					</div>
-					<a href="#" class="block bg-indigo-500 hover:bg-purple-300 py-2 px-4 rounded-full text-sm font-mitr transition duration-150 ease-in-out text-white uppercase mt-10">Get started</a>
+					<a href="#" class="block bg-indigo-500 hover:bg-purple-300 shadow-md shadow-violet-500 py-2 px-4 rounded-full text-sm font-mitr transition duration-150 ease-in-out text-white uppercase mt-10">Get started</a>
 				</div>
 			</div> 
         </div>
@@ -1697,38 +1697,10 @@ import { Head, Link } from '@inertiajs/vue3';
                         <h1 class="py-5 mb-5 text-4xl font-bold text-right">Who will benefit from this product</h1>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 xl:grids-cols-3">
-                        <div class="text-center mb-10 xl:mb-0">
+                        <div class="text-center mb-10 mt-4 xl:mb-0">
                             <div class="flex items-center justify-center">
-                                <div class="w-10 py-7 flex justify-center rounded-md bg-red-400 mb-5 md:mb-10">
-                                    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  width="60" height="60"
-                                        viewBox="0 0 100 100" xml:space="preserve">
-
-                                    <g>
-                                        <g>
-                                            <path d="M57,44h-6h-6c-3.3,0-6,2.7-6,6v9c0,1.1,0.5,2.1,1.2,2.8c0.7,0.7,1.7,1.2,2.8,1.2v9c0,3.3,2.7,6,6,6h2h2
-                                                c3.3,0,6-2.7,6-6v-9c1.1,0,2.1-0.4,2.8-1.2c0.7-0.7,1.2-1.7,1.2-2.8v-9C63,46.7,60.3,44,57,44z"/>
-                                        </g>
-                                        <g>
-                                            <circle cx="51" cy="33" r="7"/>
-                                        </g>
-                                        <g>
-                                            <path d="M36.6,66.7c-0.2-0.2-0.5-0.4-0.7-0.6c-1.9-2-3-4.5-3-7.1v-9c0-3.2,1.3-6.2,3.4-8.3c0.6-0.6,0.1-1.7-0.7-1.7
-                                                c-1.7,0-3.6,0-3.6,0h-6c-3.3,0-6,2.7-6,6v9c0,1.1,0.5,2.1,1.2,2.8c0.7,0.7,1.7,1.2,2.8,1.2v9c0,3.3,2.7,6,6,6h2h2
-                                                c0.9,0,1.7-0.2,2.4-0.5c0.4-0.2,0.6-0.5,0.6-0.9c0-1.2,0-4,0-5.1C37,67.2,36.9,66.9,36.6,66.7z"/>
-                                        </g>
-                                        <g>
-                                            <circle cx="32" cy="29" r="7"/>
-                                        </g>
-                                        <g>
-                                            <path d="M76,40h-6c0,0-1.9,0-3.6,0c-0.9,0-1.3,1-0.7,1.7c2.1,2.2,3.4,5.1,3.4,8.3v9c0,2.6-1,5.1-3,7.1
-                                                c-0.2,0.2-0.4,0.4-0.7,0.6c-0.2,0.2-0.4,0.5-0.4,0.8c0,1.1,0,3.8,0,5.1c0,0.4,0.2,0.8,0.6,0.9c0.7,0.3,1.5,0.5,2.4,0.5h2h2
-                                                c3.3,0,6-2.7,6-6v-9c1.1,0,2.1-0.4,2.8-1.2c0.7-0.7,1.2-1.7,1.2-2.8v-9C82,42.7,79.3,40,76,40z"/>
-                                        </g>
-                                        <g>
-                                            <circle cx="70" cy="29" r="7"/>
-                                        </g>
-                                    </g>
-                                    </svg>
+                                <div class="w-20 py-5 flex justify-center rounded-md bg-orange-100 mb-5 md:mb-10">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M72 88a56 56 0 1 1 112 0A56 56 0 1 1 72 88zM64 245.7C54 256.9 48 271.8 48 288s6 31.1 16 42.3V245.7zm144.4-49.3C178.7 222.7 160 261.2 160 304c0 34.3 12 65.8 32 90.5V416c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V389.2C26.2 371.2 0 332.7 0 288c0-61.9 50.1-112 112-112h32c24 0 46.2 7.5 64.4 20.3zM448 416V394.5c20-24.7 32-56.2 32-90.5c0-42.8-18.7-81.3-48.4-107.7C449.8 183.5 472 176 496 176h32c61.9 0 112 50.1 112 112c0 44.7-26.2 83.2-64 101.2V416c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32zm8-328a56 56 0 1 1 112 0A56 56 0 1 1 456 88zM576 245.7v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM320 32a64 64 0 1 1 0 128 64 64 0 1 1 0-128zM240 304c0 16.2 6 31 16 42.3V261.7c-10 11.3-16 26.1-16 42.3zm144-42.3v84.7c10-11.3 16-26.1 16-42.3s-6-31.1-16-42.3zM448 304c0 44.7-26.2 83.2-64 101.2V448c0 17.7-14.3 32-32 32H288c-17.7 0-32-14.3-32-32V405.2c-37.8-18-64-56.5-64-101.2c0-61.9 50.1-112 112-112h32c61.9 0 112 50.1 112 112z"/></svg>
                                 </div>
                             </div>
                             <h2 class="font-semibold text-gray-700 text-xl md:text-3xl mb-5">
@@ -1740,10 +1712,10 @@ import { Head, Link } from '@inertiajs/vue3';
                                 related problems.
                             </p>
                         </div>
-                        <div class="text-center mb-10 xl:mb-0">
+                        <div class="text-center mb-10 mt-4 xl:mb-0">
                             <div class="flex items-center justify-center">
-                                <div class="w-20 py-7 flex justify-center bg-red-50 rounded-md mb-5 md:mb-10">
-
+                                <div class="w-20 py-5 flex justify-center bg-red-50 rounded-md mb-5 md:mb-10">
+									<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 352h8.2c32.3-39.1 81.1-64 135.8-64c5.4 0 10.7 .2 16 .7V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM320 352H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H360.2C335.1 449.6 320 410.5 320 368c0-5.4 .2-10.7 .7-16l-.7 0zm320 16a144 144 0 1 0 -288 0 144 144 0 1 0 288 0zM496 288c8.8 0 16 7.2 16 16v48h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H496c-8.8 0-16-7.2-16-16V304c0-8.8 7.2-16 16-16z"/></svg>
                                 </div>
                             </div>
                             <h2 class="font-semibold text-gray-700 text-xl md:text-3xl mb-5">
@@ -1754,10 +1726,10 @@ import { Head, Link } from '@inertiajs/vue3';
                                 are essential. This platform helps simplify connectivity.
                             </p>
                         </div>
-                        <div class="text-center mb-10 xl:mb-0">
+                        <div class="text-center mb-10 mt-4 xl:mb-0">
                             <div class="flex items-center justify-center">
-                                <div class="w-20 py-7 flex justify-center bg-blue-50 rounded-md mb-5 md:mb-10">
-                                    <!-- svg -->
+                                <div class="w-20 py-5 flex justify-center bg-lime-100 rounded-md mb-5 md:mb-10">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"  viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
                                 </div>
                             </div>
                             <h2 class="font-semibold text-gray-700 text-xl md:text-3xl mb-5">
@@ -1771,10 +1743,10 @@ import { Head, Link } from '@inertiajs/vue3';
                                 that you can leverage to your advantage.
                             </p>
                         </div>
-                        <div class="text-center mb-10 xl:mb-0">
+                        <div class="text-center mb-10 mt-4 xl:mb-0">
                             <div class="flex items-center justify-center">
-                                <div class="w-20 py-7 flex justify-center bg-blue-50 rounded-md mb-5 md:mb-10">
-
+                                <div class="w-20 py-5 flex justify-center bg-blue-50 rounded-md mb-5 md:mb-10">
+									<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M337.8 5.4C327-1.8 313-1.8 302.2 5.4L166.3 96H48C21.5 96 0 117.5 0 144V464c0 26.5 21.5 48 48 48H592c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48H473.7L337.8 5.4zM256 416c0-35.3 28.7-64 64-64s64 28.7 64 64v96H256V416zM96 192h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V208c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H512c-8.8 0-16-7.2-16-16V208zM96 320h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V336c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H512c-8.8 0-16-7.2-16-16V336zM232 176a88 88 0 1 1 176 0 88 88 0 1 1 -176 0zm88-48c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H336V144c0-8.8-7.2-16-16-16z"/></svg>
                                 </div>
                             </div>
                             <h2 class="font-semibold text-gray-700 text-xl md:text-3xl mb-5">
@@ -1937,15 +1909,15 @@ import { Head, Link } from '@inertiajs/vue3';
 
             <!-- THIS CUZ OVERFLOW x -->
             <section class="bg-white">
-                <div class="max-w-4xl mx-auto mb-10 lg:mb-14">
+                <div class="max-w-4xl mx-auto lg:mb-14">
                     <h2 class="text-4xl pt-9 mb-2 font-bold text-right">OUR TEAM</h2>
                 </div>
                 <div class="flex flex-wrap flex-row mx-4 mb-10 justify-center">
                     <!-- My Profile -->
                     <div class="flex-shrink max-w-full mb-11 px-7 pt-4 w-2/3 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6 ">
                         <div class="relative overflow-hidden mb-2 bg-slate-100 border border-zinc-200 rounded-lg">
-                            <div class="relative overflow-hidden px-6 translate-x-1/4 pt-5">
-                                <img src="/image/OurTeam/Aon.png" class="w-32 h-32 rounded-full bg-gray-50" alt="profilePic">
+                            <div class="relative overflow-hidden px-6 pt-5">
+                                <img src="/image/OurTeam/Aon.png" class="relative w-32 h-32 mx-auto rounded-full bg-gray-50" alt="profilePic">
                             </div>
                             <div class="pt-6 text-center">
                                 <p class="text-lg leading-normal font-bold mb-1">
@@ -1969,8 +1941,8 @@ import { Head, Link } from '@inertiajs/vue3';
                     <!-- Dummy Person -->
                     <div class="flex-shrink max-w-full px-7 pt-4 w-2/3 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6">
                         <div class="relative overflow-hidden bg-slate-100 border border-zinc-200 rounded-lg">
-                            <div class="relative overflow-hidden px-6 translate-x-1/4 pt-5">
-                                <img src="/image/OurTeam/Luara.png" class="w-32 h-32 rounded-full bg-gray-50" alt="profilePic">
+                            <div class="relative overflow-hidden px-6 pt-5">
+                                <img src="/image/OurTeam/Luara.png" class="w-32 h-32 mx-auto rounded-full bg-gray-50" alt="profilePic">
                             </div>
                             <div class="pt-6 text-center">
                                 <p class="text-lg leading-normal font-bold mb-1">Luara Kingston</p>
@@ -2012,8 +1984,8 @@ import { Head, Link } from '@inertiajs/vue3';
                     <!-- Dummy Person -->
                     <div class="flex-shrink max-w-full px-7 w-2/3 pt-4 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6">
                         <div class="relative overflow-hidden bg-slate-100 border border-zinc-200 rounded-lg">
-                            <div class="relative overflow-hidden px-6 translate-x-1/4 pt-5">
-                                <img src="/image/OurTeam/Steve.png" class="w-32 h-32 rounded-full bg-gray-50" alt="profilePic">
+                            <div class="relative overflow-hidden px-6 pt-5">
+                                <img src="/image/OurTeam/Steve.png" class="w-32 h-32 mx-auto rounded-full bg-gray-50" alt="profilePic">
                             </div>
                             <div class="pt-6 text-center">
                                 <p class="text-lg leading-normal font-bold mb-1">Steve Porter</p>
@@ -2055,8 +2027,8 @@ import { Head, Link } from '@inertiajs/vue3';
                     <!-- Dummy Person -->
                     <div class="flex-shrink max-w-full px-7 w-2/3 pt-4 sm:w-1/2 md:w-5/12 lg:w-1/4 xl:px-6">
                         <div class="relative overflow-hidden bg-slate-100 border border-zinc-200 rounded-lg">
-                            <div class="relative overflow-hidden px-6 translate-x-1/4 pt-5">
-                                <img src="/image/OurTeam/Dave.png" class="w-32 h-32 rounded-full bg-gray-50" alt="profilePic">
+                            <div class="relative overflow-hidden px-6 pt-5">
+                                <img src="/image/OurTeam/Dave.png" class="relative mx-auto w-32 h-32 rounded-full bg-gray-50" alt="profilePic">
                             </div>
                             <div class="pt-6 text-center">
                                 <p class="text-lg leading-normal font-bold mb-1">Dave Robin</p>
