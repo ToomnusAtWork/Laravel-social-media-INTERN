@@ -10,8 +10,7 @@
                 Choose how your profile appears to other members in the group chat and the public profile.
             </p>   
         </header>
-
-        
-
+            <input type="file" class="profilepic">
+            <img class="user-profile-pic border rounded-lg"  alt="NEW"/>
     </section>
 </template>
