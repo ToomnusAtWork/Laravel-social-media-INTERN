@@ -25,7 +25,7 @@
                         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                             <div class="mb-4 flex items-center justify-between">
                                 <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Latest Posts</h3>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Latest forum posts</h3>
                                 <span class="text-base font-normal text-gray-500">This is a list of Post</span>
                                 </div>
                                 <div class="flex-shrink-0">

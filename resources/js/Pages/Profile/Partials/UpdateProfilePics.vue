@@ -11,6 +11,6 @@
             </p>   
         </header>
             <input type="file" class="profilepic">
-            <img class="user-profile-pic border rounded-lg"  alt="NEW"/>
+            <img class="user-profile-pic border rounded-full" src="https://demo.themesberg.com/windster/images/users/neil-sims.png" alt="ProfilePic"/>
     </section>
 </template>
