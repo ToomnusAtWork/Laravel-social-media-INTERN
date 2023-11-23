@@ -46,7 +46,7 @@ Route::get('/chat', [ChatMessageController::class, 'index'])->name('chat');
 Route::post('/chat', [ChatMessageController::class, 'store']);
 
 Route::get('/admin', [AdminController::class,'index'])->name('admin');
-Route::get('/admin/dashboard', [DashboardController::class,'index'])->name('admin.dashboard');
+Route::get('/admin/dashboard', [DashboardController::class,'index'])->name('adminDashboard');
 
 Route::post('/markdown', MarkdownController::class)->name('markdown');
 
