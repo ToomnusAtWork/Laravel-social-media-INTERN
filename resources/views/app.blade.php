@@ -18,4 +18,9 @@
     <body class="font-sans antialiased">
         @inertia
     </body>
+    <style>
+        body {
+            margin: 0 !important;
+        }
+    </style>
 </html>

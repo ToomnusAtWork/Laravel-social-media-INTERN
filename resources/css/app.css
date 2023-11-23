@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .markdown p {
     @apply mb-2;
 }

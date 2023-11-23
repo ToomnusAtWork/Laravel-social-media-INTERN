@@ -19,6 +19,7 @@
                     <div class="pt-6 px-4">
                     <div class="w-full grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4">
                         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Overall Results</h3>
                             <span class="mt-2">Web app component compare: </span>
                             <AdminDashboard  :width="500" :height="400" ></AdminDashboard>
                         </div>
@@ -423,7 +424,7 @@
                     </div>
                 </footer>
                 <p class="text-center text-sm text-gray-500 my-10">
-                    &copy; 2019-2021 <a href="#" class="hover:underline" target="_blank">Themesberg</a>. All rights reserved.
+                    &copy; 2023 <a href="#" class="hover:underline" target="_blank">SocialSociety</a>. All rights reserved.
                 </p>
             </div>
         </div>
