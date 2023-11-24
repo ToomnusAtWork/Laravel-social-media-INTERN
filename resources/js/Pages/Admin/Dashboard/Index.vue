@@ -1,4 +1,5 @@
 <template>
+    <Head title="Admin Dashbooard" />
     <div>
         <AdminNav>
         </AdminNav>
@@ -15,6 +16,7 @@
     </div>
 </template>
 <script setup>
+    import { Head } from '@inertiajs/vue3';
     import AdminDashboard from '@/Components/Admin/AdminDashboard.vue';
     import AdminMenu from '@/Components/Admin/AdminMenu.vue';
     import AdminNav from '@/Components/Admin/AdminNavigation.vue';

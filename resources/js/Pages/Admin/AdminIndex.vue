@@ -1,5 +1,5 @@
 <script setup>
-    import { Head } from '@inertiajs/vue3';
+    import { Head, Link } from '@inertiajs/vue3';
     import AdminNav from '@/Components/Admin/AdminNavigation.vue';
     import AdminMenu from '@/Components/Admin/AdminMenu.vue';
     import AdminDashboard from '@/Components/Admin/AdminDashboard.vue';
@@ -15,7 +15,7 @@
             <AdminMenu>
             </AdminMenu>
             <div id="main-content" class="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
-                <main>
+                                       <!-- BORDER!!! -->
                     <div class="pt-6 px-4">
                     <div class="w-full grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4">
                         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8  2xl:col-span-2">
@@ -23,6 +23,7 @@
                             <span class="mt-2">Web app component compare: </span>
                             <AdminDashboard  :width="500" :height="400" ></AdminDashboard>
                         </div>
+                        <!-- ADD LINK -->
                         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                             <div class="mb-4 flex items-center justify-between">
                                 <div>
@@ -184,10 +185,10 @@
                     <div class="grid grid-cols-1 2xl:grid-cols-2 xl:gap-4 my-4">
                         <div class="bg-white shadow rounded-lg mb-4 p-4 sm:p-6 h-full">
                             <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-xl font-bold leading-none text-gray-900">Latest Activities</h3>
-                                <a href="#" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg inline-flex items-center p-2">
-                                View all
-                                </a>
+                                <h3 class="text-xl font-bold leading-none text-gray-900">Top users who participated</h3>
+                                <Link href="#" class="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg inline-flex items-center p-2">
+                                    View all
+                                </Link>
                             </div>
                             <div class="flow-root">
                                 <ul role="list" class="divide-y divide-gray-200">
@@ -285,7 +286,7 @@
                             </div>
                         </div>
                         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
-                            <h3 class="text-xl leading-none font-bold text-gray-900 mb-10">Acquisition Overview</h3>
+                            <h3 class="text-xl leading-none font-bold text-gray-900 mb-10">Most popular topics</h3>
                             <div class="block w-full overflow-x-auto">
                                 <table class="items-center w-full bg-transparent border-collapse">
                                 <thead>
@@ -386,7 +387,7 @@
                         </div>
                     </div>
                     </div>
-                </main>
+                <!-- <Link :href="route('discussions.show', discussion)" class="block bg-white overflow-hidden shadow-sm sm:rounded-lg"> -->
                 <footer class="bg-white md:flex md:items-center md:justify-between shadow rounded-lg p-4 md:p-6 xl:p-8 my-6 mx-4">
                     <ul class="flex items-center flex-wrap mb-6 md:mb-0">
                     <li><a href="#" class="text-sm font-normal text-gray-500 hover:underline mr-4 md:mr-6">Terms and conditions</a></li>
