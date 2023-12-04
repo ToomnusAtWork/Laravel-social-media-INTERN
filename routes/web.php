@@ -38,6 +38,8 @@ Route::get('/', function () {
     ]);
 });
 
+
+// main page cuz the problem fixing soon...
 Route::get('/forum', ForumIndexController::class)->name('forum');
 Route::get('/', IndexController::class)->name('home');
 Route::get('/discussions/{discussion:slug}', DiscussionShowController::class)->name('discussions.show');
